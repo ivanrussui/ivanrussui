@@ -1,12 +1,8 @@
 .promo {
 	min-height: 100vh;
 	position: relative;
-	background: url("../img/main_bg.jpg") no-repeat 50% / cover;
-	// background: url('../img/main_bg.jpg') no-repeat left center /cover;
-	// background-position: -35px 0;
-	// background-position: 0 0;
-	// по бэку пока непонятно надо будет по адптации пройтись конкретно сли выставить background-position: 0 0
-	padding-top: 320px;
+	background: url("../img/main_bg.png") no-repeat 75% bottom/ auto 100%;
+	padding-top: 205px;
 	&__title {
 		width: 535px;
 		margin-top: 10px;

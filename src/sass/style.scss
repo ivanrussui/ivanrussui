@@ -4,6 +4,10 @@
 @import 'base/variables';
 @import 'base/mixins';
 
+body {
+	background: $background-color;
+	color: $title-color;
+}
 .container {
 	width: 1140px;
 	margin: 0 auto;
