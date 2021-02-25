@@ -1,0 +1,14 @@
+@import 'libs/bootstrap-reboot.min';
+@import 'libs/font';
+
+@import 'base/variables';
+@import 'base/mixins';
+
+.container {
+	width: 1140px;
+	margin: 0 auto;
+}
+
+@import 'blocks/promo';
+@import 'blocks/title';
+@import 'blocks/botton';
