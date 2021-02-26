@@ -8,10 +8,17 @@
 	align-items: center;
 	height: 340px;
 	z-index: 3;
+	&__link {
+		&:hover {
+			svg path {
+				fill: $hover-color;
+			}
+		}
+	}
 	&__divider {
 		width: 2px;
 		height: 70px;
-		background-color: $title-color;
+		background-color: $text-color;
 	}
 	&__text {
 		height: 150px;
@@ -20,7 +27,7 @@
 			display: block;
 			transform: rotate(-90deg) translate(-30%, -260%);
 			width: 150px;
-			// color: $title-color;
+			// color: $text-color;
 		}
 	}
 }

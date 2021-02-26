@@ -6,7 +6,7 @@
 
 body {
 	background: $background-color;
-	color: $title-color;
+	color: $text-color;
 }
 .container {
 	width: 1140px;
@@ -17,3 +17,4 @@ body {
 @import 'blocks/title';
 @import 'blocks/botton';
 @import 'blocks/sidepanel';
+@import 'blocks/menu';
