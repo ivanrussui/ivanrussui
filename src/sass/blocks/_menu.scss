@@ -8,6 +8,9 @@
 	justify-content: space-between;
 	align-items: flex-end;
 	cursor: pointer;
+	&:hover span {
+		background: $hover-color;
+	}
 	span {
 		display: block;
 		width: 30px;
@@ -48,6 +51,9 @@
 		top: 25px;
 		right: 25px;
 		cursor: pointer;
+		&:hover path{
+			fill: $hover-color;
+		}
 	}
 	&__list {
 		list-style-type: none;
@@ -95,6 +101,9 @@
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
+		a:hover svg path{
+			fill: $hover-color;
+		}
 	}
 	&__overlay {
 		position: fixed;
