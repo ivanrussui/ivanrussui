@@ -2,6 +2,7 @@
 	font-weight: bold;
 	font-size: 48px;
 	line-height: 60px;
+	color: #000;
 	&_fz14 {
 		font-size: 14px;
 		line-height: 21px;
@@ -11,7 +12,11 @@
 		line-height: 24px;
 		// color: $text-color;
 	}
+	
 	// &_fz48 {
 	// 	color: $text-color;
 	// }
+	&_fz36 {
+		font-size: 36px;
+	}
 }

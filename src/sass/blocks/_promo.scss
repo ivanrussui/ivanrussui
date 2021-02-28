@@ -2,16 +2,21 @@
 	min-height: 100vh;
 	position: relative;
 	background: url("../img/main_bg.png") no-repeat 75% bottom/ auto 100%;
-	// transition: all 0.1s;
+	transition: all 0.3s;
+	background-color: DarkSlateBlue;
 	padding-top: 205px;
+	// border-top: 10px solid indigo;
+	// border-bottom: 5px dashed indigo;
 	&__title {
 		width: 535px;
 		margin-top: 10px;
+		color: $text-color;
 	}
 	&__subtitle {
 		position: relative;
 		padding-left: 10px;
 		z-index: 1;
+		color: $text-color;
 		@include before_circle;
 	}
 	&__btns {
@@ -27,6 +32,7 @@
 		&:hover {
 			color: $hover-color;
 			text-decoration: none;
+			transition: all .7s;
 		}
 	}
 }

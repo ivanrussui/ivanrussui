@@ -4,17 +4,15 @@
 @import 'base/variables';
 @import 'base/mixins';
 
-body {
-	background: $background-color;
-	color: $text-color;
-}
 .container {
 	width: 1140px;
 	margin: 0 auto;
 }
 
-@import 'blocks/promo';
+
 @import 'blocks/title';
+@import 'blocks/promo';
 @import 'blocks/botton';
 @import 'blocks/sidepanel';
 @import 'blocks/menu';
+@import 'blocks/about';

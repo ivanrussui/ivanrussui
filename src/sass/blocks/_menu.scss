@@ -10,6 +10,7 @@
 	cursor: pointer;
 	&:hover span {
 		background: $hover-color;
+		transition: all .5s;
 	}
 	span {
 		display: block;
@@ -53,6 +54,7 @@
 		cursor: pointer;
 		&:hover path{
 			fill: $hover-color;
+			transition: all .5s;
 		}
 	}
 	&__list {
@@ -84,11 +86,11 @@
 		}
 		a {
 			color: $text-color;
-			transition: all 0.7s;
+			// transition: all 0.7s;
 			// text-decoration: $hover-color;
 			// &:hover {
-			// 	transition: all 0.7s;
-			// 	// text-decoration: aqua;
+			// 	transition: all 2.7s;
+			// 	text-decoration: aqua;
 			// }
 		}
 	}
@@ -103,6 +105,7 @@
 		align-items: center;
 		a:hover svg path{
 			fill: $hover-color;
+			transition: all .5s;
 		}
 	}
 	&__overlay {
