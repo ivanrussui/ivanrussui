@@ -18,17 +18,16 @@
 	&__descr {
 		margin-top: 6px;
 	}
-	&__subtitle {
+	&__title {
 		position: relative;
 		padding-left: 12px;
 		@include before_circle;
 	}
-	&__title {
+	&__subtitle {
 		margin: 6px 0 4px;
 	}
 	&__text {
 		margin-top: 20px;
-		margin-bottom: 0;
 		font-size: 14px;
 		line-height: 21px;
 	}
@@ -56,8 +55,10 @@
 			line-height: 18px;
 		}
 	}
+	.divider {
+		@include divider;
+		margin: 0;
+	}
 }
 
-.divider {
-	@include divider;
-}
+

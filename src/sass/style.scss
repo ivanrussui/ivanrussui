@@ -1,8 +1,9 @@
-@import 'libs/bootstrap-reboot.min';
+@import 'libs/mybootstrap-reboot.min';
 @import 'libs/font';
 
 @import 'base/variables';
 @import 'base/mixins';
+
 
 .container {
 	width: 1140px;
@@ -16,3 +17,4 @@
 @import 'blocks/sidepanel';
 @import 'blocks/menu';
 @import 'blocks/about';
+@import 'blocks/resume';

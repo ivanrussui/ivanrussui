@@ -81,17 +81,14 @@
 		&:hover {
 			&::before {
 				background-color: $hover-color;
-				// background-color: blueviolet;
 			}
 		}
 		a {
 			color: $text-color;
-			// transition: all 0.7s;
-			// text-decoration: $hover-color;
-			// &:hover {
-			// 	transition: all 2.7s;
-			// 	text-decoration: aqua;
-			// }
+			&:hover {
+				text-decoration: underline;
+				text-decoration-color: $hover-color;
+			}
 		}
 	}
 	&__social {
