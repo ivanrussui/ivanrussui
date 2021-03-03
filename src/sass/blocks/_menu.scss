@@ -41,7 +41,8 @@
 	&__block {
 		position: relative;
 		width: 345px;
-		background-color: $main-color;
+		// background-color: $main-color;
+		background-color: $background-color;
 		height: 100%;
 		padding-top: 140px;
 		transition: all 0.7s;
