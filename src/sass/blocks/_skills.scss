@@ -1,0 +1,86 @@
+.skills {
+	padding-top: 120px;
+	&__title {
+		position: relative;
+		text-align: center;
+		@include before_circle;
+		&:before {
+			top: -6px;
+			left: 50%;
+			transform: translateX(-50%);
+		}
+	}
+	&__subtitle {
+		text-align: center;
+	}
+	&__items {
+		display: grid;
+		padding: 0 10px;
+		grid-template-columns: repeat(4, 270px);
+		grid-template-rows: repeat(2, minmax(270px, auto));
+		grid-auto-rows: minmax(270px, auto);
+		gap: 13px;
+		// justify-content: center;
+		// align-content: center;
+	}
+	&__item {
+		padding: 30px;
+		border: 1px solid #000000;
+		&-img {
+			display: flex;
+			align-items: center;
+			min-height: 65px;
+			// флекс и потом мин высота для того чтобы картинки внутри выравнивались по центру независимо от их высоты
+			img {
+				max-height: 65px;
+				// это для того чтобы вставив любую картинку блок не ломался
+			}
+		}
+		h4 {
+			margin-top: 15px;
+		}
+		p {
+			margin-top: 15px;
+			font-size: 12px;
+			line-height: 18px;
+		}
+	}
+	&__ratings {
+		margin-top: 120px;
+		display: grid;
+		grid-template-columns: repeat(3, 350px);
+		grid-template-rows: repeat(2, 70px);
+		column-gap: 45px;
+		row-gap: 30px;
+		&-item {
+			display: grid;
+			grid-template-columns: 200px 35px;
+			grid-template-rows: minmax(21px, auto);
+			justify-content: space-between;
+			align-content: space-between;
+		}
+		&-title {
+			position: relative;
+			padding: 2px 0 0 13px;
+			@include before_circle;
+		}
+		&-counter {
+			padding-top: 2px;
+			font-size: 14px;
+			line-height: 21px;
+		}
+		&-line {
+			width: 350px;
+			height: 14px;
+			background-color: #e8e4de;
+			border-radius: 4px;
+			grid-column: 1 / 3;
+			span {
+				display: block;
+				height: 100%;
+				background-color: $main-color;
+				border-radius: 4px;
+			}
+		}
+	}
+}
