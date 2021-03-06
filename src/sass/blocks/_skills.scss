@@ -52,6 +52,7 @@
 			@include before_circle;
 		}
 		&-counter {
+			justify-self: end;
 			padding-top: 2px;
 			font-size: 14px;
 			line-height: 21px;
