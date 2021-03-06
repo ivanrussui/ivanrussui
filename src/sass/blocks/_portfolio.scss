@@ -1,18 +1,5 @@
 .portfolio {
 	padding-top: 120px;
-	&__title {
-		position: relative;
-		text-align: center;
-		@include before_circle;
-		&:before {
-			top: -6px;
-			left: 50%;
-			transform: translateX(-50%);
-		}
-	}
-	&__subtitle {
-		text-align: center;
-	}
 	&__wrap {
 		display: grid;
 		grid-template: repeat(2, 280px) / repeat(4, 280px);
@@ -25,6 +12,16 @@
 		.horizontal {
 			grid-row: 2 / 3 ;
 			grid-column: 2 / 4;
+		}
+	}
+	&__item {
+		transition: all 0.2s;
+		img {
+			width: 100%;
+		}
+		&:hover {
+			filter:  drop-shadow(15px 15px 20px $main-color) brightness(1.2);
+			transform: scale(1.05);
 		}
 	}
 }
