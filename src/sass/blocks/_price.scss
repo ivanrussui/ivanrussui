@@ -5,7 +5,7 @@
 		display: grid;
 		justify-content: space-between;
 		grid-template-columns: repeat(2, 366px);
-		grid-template-rows: repeat(3, 44px);
+		grid-template-rows: repeat(3, minmax(44px, auto));
 		grid-auto-rows: minmax(44px, auto);
 		row-gap: 15px;
 	}
@@ -15,12 +15,16 @@
 		grid-template-columns: repeat(2, auto);
 		grid-template-rows: repeat(2, minmax(21px, auto));
 		padding-left: 25px;
+		
 		@include before_circle;
 		&:before {
 			width: 15px;
 			height: 15px;
 			top: 2px;
 		}
+		// &-title {
+		// 	grid-auto-rows: auto;
+		// }
 		&-money {
 			justify-self: end;
 		}
