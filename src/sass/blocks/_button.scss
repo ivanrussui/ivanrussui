@@ -1,0 +1,21 @@
+.btn {
+	// width: 135px;
+	// height: 45px;
+	background: $main-color;
+	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+	padding: 12px 25px;
+	text-align: center;
+	// border-radius: 25%;
+	color: $text-color;
+	font-weight: bold;
+	font-size: 14px;
+	line-height: 21px;
+	&_two {
+		padding: 12px 33px;
+	}
+	&:hover {
+		color: $hover-color;
+		text-decoration: none;
+		transition: all .7s;
+	}
+}

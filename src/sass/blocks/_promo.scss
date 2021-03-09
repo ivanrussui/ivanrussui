@@ -24,13 +24,13 @@
 		justify-content: space-between;
 		width: 300px;
 	}
-	&__link {
-		color: $text-color;
-		font-weight: bold;
-		&:hover {
-			color: $hover-color;
-			text-decoration: none;
-			transition: all .7s;
-		}
-	}
+	// &__link {
+	// 	color: $text-color;
+	// 	font-weight: bold;
+	// 	&:hover {
+	// 		color: $hover-color;
+	// 		text-decoration: none;
+	// 		transition: all .7s;
+	// 	}
+	// }
 }

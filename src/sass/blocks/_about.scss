@@ -26,6 +26,10 @@
 	&__subtitle {
 		margin: 6px 0 4px;
 	}
+	.divider {
+		@include divider;
+			margin: 0;
+	}
 	&__text {
 		margin-top: 20px;
 		font-size: 14px;
@@ -54,10 +58,6 @@
 			font-size: 12px;
 			line-height: 18px;
 		}
-	}
-	.divider {
-		@include divider;
-			margin: 0;
 	}
 }
 
