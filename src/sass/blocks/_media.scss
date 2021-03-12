@@ -1,0 +1,157 @@
+@media (max-width: 1300px) {
+	// .container {
+	// 	padding-left: 30px;
+	// }
+	// .sidepanel {
+	// 	left: 10px;
+	// }
+	.promo {
+		background-position: 90%;
+	}
+}
+
+@media (max-width: 1200px) {
+	.container {
+		max-width: 960px;
+	}
+	.about {
+		&__wrap {
+			grid-template-columns: 400px 520px;
+			column-gap: 40px;
+		}
+		&__skills {
+			column-gap: 20px;
+			grid-template: repeat(2, minmax(116px, auto)) / repeat(2, 250px);
+			&-item {
+				grid-template-columns: 40px 195px;
+				column-gap: 15px;
+			}
+		}
+	}
+}
+
+@media (max-width: 992px) {
+	.container {
+		max-width: 720px;
+	}
+	.sidepanel {
+		display: none;
+	}
+	.promo {
+		background-position: 90%;
+	}
+	.title {
+		&_fz36 {
+			font-size: 30px;
+		}
+	}
+	.about {
+		&__wrap {
+			grid-template-columns: 300px 380px;
+		}
+		&__skills {
+			grid-template-columns: 380px;
+			grid-auto-rows: minmax(116px, auto);
+			// думаю строку выше надо будет переделать... слишком много минимум картинка хуже выходит
+			&-item {
+				grid-template-columns: 40px 320px;
+				column-gap: 20px;
+			}
+		}
+		// &__photo {
+		// 	background-position: left top;
+		// }
+	}
+}
+
+@media (max-width: 768px) {
+	.container {
+		max-width: 540px;
+		padding-left: 0;
+	}
+	// .sidepanel {
+	// 	display: none;
+	// }
+	.title {
+		&_fz48 {
+			font-size: 26px;
+		}
+	}
+
+	.promo {
+		background-position: 85%;
+		&__title {
+			width: 300px;
+			line-height: 39px;
+			margin-right: 0;
+		}
+	}
+	.about {
+		padding-top: 40px;
+		&__wrap {
+			grid-template: 400px auto auto / 1fr;
+		}
+		&__photo {
+			grid-row: unset;
+			img {
+				object-fit: contain;
+			}
+		}
+		&__skills {
+			grid-template-columns: repeat(2, 260px);
+			&-item {
+				grid-template-columns: 40px 200px;
+				column-gap: 20px;
+			}
+		}
+	}
+	// .hamburger {
+	// 	right: 15px;
+	// }
+}
+@media (max-width: 576px) {
+	.container {
+		width: 100%;
+		padding: 0 10px;
+	}
+	.title {
+		&_fz36 {
+			margin: 20px 0 15px;
+			font-size: 24px;
+			line-height: 36px;
+		}
+	}
+	// .sidepanel {
+	// 	display: none;
+	// }
+	.hamburger {
+		right: 20px;
+	}
+	.menu {
+		&__block {
+			width: 250px;
+			padding-top: 100px;
+		}
+		&__list {
+			padding-left: 20px;
+		}
+		&__social {
+			bottom: 80px;
+		}
+	}
+	.promo {
+		background-position: right 50px;
+		&__btns {
+			margin-top: 30px;
+		}
+	}
+	.about {
+		&__wrap {
+			grid-template: 340px auto auto / 1fr;
+			// row-gap: 20px;
+		}
+		&__skills {
+			grid-template-columns: 1fr;
+		}
+	}
+}
