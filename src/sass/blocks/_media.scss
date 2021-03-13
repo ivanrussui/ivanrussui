@@ -2,12 +2,12 @@
 	// .container {
 	// 	padding-left: 30px;
 	// }
-	// .sidepanel {
-	// 	left: 10px;
-	// }
-	.promo {
-		background-position: 90%;
+	.sidepanel {
+		display: none;
 	}
+	// .promo {
+	// 	background-position: 90%;
+	// }
 }
 
 @media (max-width: 1200px) {
@@ -34,9 +34,9 @@
 	.container {
 		max-width: 720px;
 	}
-	.sidepanel {
-		display: none;
-	}
+	// .sidepanel {
+	// 	display: none;
+	// }
 	.promo {
 		background-position: 90%;
 	}
