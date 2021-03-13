@@ -19,9 +19,9 @@ counters.forEach((item, i) => {
   lines[i].style.width = item.innerHTML;
 });
 
-
+// jQuery плагины
 $(document).ready(function () {
-	// $('#form').validate();
+	// Validate
 	$('#form').validate({
 		rules: {
 			name: {
@@ -45,5 +45,21 @@ $(document).ready(function () {
 			},
 			checkbox: "Пожалуйста, подтвердите согласие"
 		}
+	});
+
+	// Ajax
+	$('form').submit(function(e) {
+		e.preventDefault();
+		$.ajax({
+			type: "POST",
+			url: "mailer/smart.php",
+			data: $(this).serialize()
+		}).done(function() {
+			$(this).find("input").val("");
+
+			
+			$('form').trigger('reset');
+			return false;
+		});
 	});
 });
