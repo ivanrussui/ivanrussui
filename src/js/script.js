@@ -12,9 +12,38 @@ closeBtn.addEventListener('click', () => {
 });
 
 // автоматический пересчет процентов
-const	counters = document.querySelectorAll('.skills__ratings-counter'),
-	lines = document.querySelectorAll('.skills__ratings-line span');
+const counters = document.querySelectorAll('.skills__ratings-counter'),
+  lines = document.querySelectorAll('.skills__ratings-line span');
 
 counters.forEach((item, i) => {
-	lines[i].style.width = item.innerHTML;
+  lines[i].style.width = item.innerHTML;
+});
+
+
+$(document).ready(function () {
+	// $('#form').validate();
+	$('#form').validate({
+		rules: {
+			name: {
+				required: true,
+				minlength: 2
+			},
+			email: {
+				required: true,
+				email: true
+			},
+			checkbox: "required"
+		},
+		messages: {
+			name: {
+				required: "Пожалуйста, введите свое имя",
+				minlength: jQuery.validator.format("Введите от {0} букв")
+			},
+			email: {
+				required: "Пожалуйста, введите свою почту",
+				email: "Неправильно введена почта"
+			},
+			checkbox: "Пожалуйста, подтвердите согласие"
+		}
+	});
 });

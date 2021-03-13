@@ -60,42 +60,25 @@
 		grid-template: 45px 190px 45px / repeat(2, 230px);
 		justify-content: space-between;
 		row-gap: 30px;
-		label {
-			display: block;
-			position: absolute;
-			top: -9px;
-			left: 12px;
-			height: 18px;
-			padding: 0 8px;
-			background-color: #fff;
-			font-size: 12px;
-		}
 	}
-	&__triggers {
-		grid-column: 1 / 3;
-		display: grid;
-		grid-template-columns: repeat(2, auto);
-		column-gap: 35px;
-		// justify-content: space-between;
-		// align-content: space-between;
-	}
-	&__policy {
-		// display: grid;
+	.label_basic {
+		display: block;
+		position: absolute;
+		top: -9px;
+		left: 12px;
+		height: 18px;
+		padding: 0 8px;
+		background-color: #fff;
 		font-size: 12px;
-		line-height: 18px;
-		// align-content: center;
-		align-self: center;
-		// align-items: center;
-		// padding-left: 5px;
-		// justify-content: space-between;
-		// justify-self: end;
-		a {
-			color: $main-color;
-			&:hover {
-				text-decoration-color: $hover-color;
-			}
-		}
 	}
+
+	// &__triggers {
+	// 	grid-column: 1 / 3;
+	// 	display: grid;
+	// 	grid-template-columns: repeat(2, auto);
+	// 	column-gap: 35px;
+	// }
+
 	&__input {
 		position: relative;
 		input {
@@ -121,12 +104,38 @@
 	}
 	&__btn {
 		border: none;
-		// border-radius: 0;
-		padding: 12px 26px;
+		// padding: 12px 26px;
+	}
+	&__policy {
+		position: relative;
+		font-size: 12px;
+		line-height: 18px;
+		align-self: center;
+		a {
+			color: $main-color;
+			&:hover {
+				text-decoration-color: $hover-color;
+			}
+		}
 	}
 }
-// #vk svg {
-// 	width: 45px;
-// 	height: 45px;
-// }
 
+#checkbox-error {
+	position: absolute;
+	top: -27px;
+	left: 0px;
+	color: $main-color;
+	font-size: 13px;
+	padding: 0 3px;
+}
+#name-error, #email-error {
+	position: absolute;
+	top: -31px;
+	left: 0px;
+	color: $main-color;
+	font-size: 15px;
+	border: none;
+}
+.error, #checkbox {
+	border: 1px solid red;
+}
