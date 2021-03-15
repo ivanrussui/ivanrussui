@@ -21,45 +21,61 @@ counters.forEach((item, i) => {
 
 // jQuery плагины
 $(document).ready(function () {
-	// Validate
-	$('#form').validate({
-		rules: {
-			name: {
-				required: true,
-				minlength: 2
-			},
-			email: {
-				required: true,
-				email: true
-			},
-			checkbox: "required"
-		},
-		messages: {
-			name: {
-				required: "Пожалуйста, введите свое имя",
-				minlength: jQuery.validator.format("Введите от {0} букв")
-			},
-			email: {
-				required: "Пожалуйста, введите свою почту",
-				email: "Неправильно введена почта"
-			},
-			checkbox: "Пожалуйста, подтвердите согласие"
-		}
-	});
+  // Validate
+  function validateForms(form) {
+    $(form).validate({
+      rules: {
+        name: {
+          required: true,
+          minlength: 2,
+        },
+        email: {
+          required: true,
+          email: true,
+        },
+        checkbox: 'required',
+      },
+      messages: {
+        name: {
+          required: 'Пожалуйста, введите свое имя',
+          minlength: jQuery.validator.format('Введите от {0} букв'),
+        },
+        email: {
+          required: 'Пожалуйста, введите свою почту',
+          email: 'Неправильно введена почта',
+        },
+        checkbox: 'Пожалуйста, подтвердите согласие',
+      },
+    });
+  }
 
-	// Ajax
-	$('form').submit(function(e) {
-		e.preventDefault();
-		$.ajax({
-			type: "POST",
-			url: "mailer/smart.php",
-			data: $(this).serialize()
-		}).done(function() {
-			$(this).find("input").val("");
+  validateForms('#form');
 
-			
-			$('form').trigger('reset');
-			return false;
-		});
-	});
+  // Ajax
+  $('form').submit(function (e) {
+    e.preventDefault();
+
+    // это условие чтобы письмо пустым не отправлялось
+    if (!$(this).valid()) {
+      return;
+    }
+
+    $.ajax({
+      type: 'POST',
+      url: 'mailer/smart.php',
+      data: $(this).serialize(),
+    }).done(function () {
+      $(this).find('input').val('');
+
+      $('form').trigger('reset');
+    });
+    return false;
+  });
+
+  // modal
+  // $('[data-modal=modal]').slideUp(700);
+
+  $('[data-modal=modal]').on('click', function () {
+    $('.overlay, #modal').slideUp(700);
+  });
 });

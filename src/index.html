@@ -224,7 +224,7 @@
 		</div>
 	</section>
 
-	<!-- <section class="resume">
+	<section class="resume">
 		<div class="container">
 			<h2 class="title title_fz16 title__section-title">Опыт</h2>
 			<div class="title title_fz36 title__section-subtitle">Чем я буду полезен</div>
@@ -304,9 +304,9 @@
 				</div>
 			</div>
 		</div>
-	</section> -->
+	</section>
 
-	<!-- <section class="skills">
+	<section class="skills">
 		<div class="container">
 			<h2 class="title title_fz16 title__section-title">Навыки</h2>
 			<div class="title title_fz36 title__section-subtitle">Что я использую в работе</div>
@@ -443,7 +443,7 @@
 
 			</div>
 		</div>
-	</section> -->
+	</section>
 
 	<!-- <section class="portfolio">
 		<div class="container">
@@ -582,7 +582,7 @@
 							<textarea name="text" id="text"></textarea>
 							<label class="label_basic" for="text">Ваше сообщение</label>
 						</div>
-						<button class="btn contacts__btn">Отправить сообщение</button>
+						<button data-modal="modal" class="btn contacts__btn">Отправить сообщение</button>
 						<div class="contacts__policy">
 							<input name="checkbox" id="checkbox" type="checkbox">
 							<span>Я согласен(а) с <br> <a target="_blank" href="/policy.html">политикой конфиденциальности</a> </span>
@@ -593,6 +593,14 @@
 			</div>
 		</div>
 	</section>
+
+	<div class="overlay">
+		<div class="modal" id="modal">
+			<div class="modal__close">&times;</div>
+			<div class="modal__title title_fz20">Спасибо!</div>
+			<div class="modal__subtitle title_fz20">Я свяжусь с вами в ближайшее время.</div>
+		</div>
+	</div>
 
 	<!--Подключаем jQuery  -->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>

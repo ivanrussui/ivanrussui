@@ -13,7 +13,7 @@
 	&__subtitle {
 		position: relative;
 		padding-left: 10px;
-		z-index: 1;
+		z-index: 0;
 		color: $text-color;
 		@include before_circle;
 	}

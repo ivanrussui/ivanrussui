@@ -68,16 +68,17 @@
 				top: 15px;
 			}
 		}
+		&-body {
+			font-size: 12px;
+			line-height: 18px;
+		}
 	}
 	&__location {
 		margin-top: 4px;
 		font-size: 12px;
 		line-height: 18px;
 	}
-	&__body {
-		font-size: 12px;
-		line-height: 18px;
-	}
+
 }
 .divider {
 	@include divider;
