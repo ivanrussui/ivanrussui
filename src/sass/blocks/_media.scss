@@ -37,13 +37,25 @@
 	.skills {
 		&__items {
 			justify-content: space-evenly;
-			grid-template-columns: repeat(3, 270px);
+			grid-template-columns: repeat(auto-fit, 270px);
 		}
 		&__ratings {
 			justify-content: space-evenly;
-			grid-template-columns: repeat(2, 350px);
+			grid-template-columns: repeat(auto-fit, 350px);
 			grid-auto-rows: minmax(70px, auto);
 			row-gap: 40px;
+		}
+	}
+	.portfolio {
+		&__wrap {
+			grid-template-columns: repeat(auto-fit, 280px);
+			grid-auto-rows: 280px;
+			justify-content: space-evenly;
+			row-gap: 13px;
+			.vertical, .horizontal {
+				grid-row: unset;
+				grid-column: unset;
+			}
 		}
 	}
 }
@@ -87,14 +99,27 @@
 			grid-template-columns: repeat(2, 337px);
 		}
 	}
+	// .skills {
+	// 	&__items {
+	// 		padding: 0;
+	// 		grid-template-columns: repeat(2, 270px);
+	// 	}
+	// 	&__ratings {
+	// 		margin-top: 40px;
+	// 		grid-template-columns: repeat(2, 300px);
+	// 		&-line {
+	// 			width: 300px;
+	// 		}
+	// 	}
+	// }
 	.skills {
 		&__items {
 			padding: 0;
-			grid-template-columns: repeat(2, 270px);
+			// grid-template-columns: repeat(2, 270px);
 		}
 		&__ratings {
 			margin-top: 40px;
-			grid-template-columns: repeat(2, 300px);
+			grid-template-columns: repeat(auto-fit, 300px);
 			&-line {
 				width: 300px;
 			}
@@ -103,6 +128,9 @@
 }
 
 @media (max-width: 768px) {
+	.divider {
+		margin: 15px auto 20px;
+	}
 	.container {
 		max-width: 540px;
 		padding-left: 0;
@@ -153,20 +181,32 @@
 			row-gap: 40px;
 		}
 	}
+	// .skills {
+	// 	padding-top: 40px;
+	// 	&__items {
+	// 		gap: 2px;
+	// 	}
+	// 	&__ratings {
+	// 		grid-template-columns: 300px;
+	// 	}
+	// }
 	.skills {
 		padding-top: 40px;
 		&__items {
-			gap: 2px;
+			gap: 20px;
 		}
 		&__ratings {
 			grid-template-columns: 300px;
 		}
 	}
+	.portfolio {
+		padding-top: 40px;
+		&__wrap {
+			row-gap: 20px;
+		}
+	}
 }
 @media (max-width: 576px) {
-	.divider {
-		margin: 15px auto 20px;
-	}
 	.container {
 		width: 100%;
 		padding: 0 10px;
@@ -213,7 +253,7 @@
 	}
 	.resume {
 		&__wrap {
-			padding: 0 10px;
+			padding: 0 5px;
 		}
 		&__location {
 			margin-top: 0;
@@ -223,10 +263,10 @@
 
 		// }
 	}
-	.skills {
-		&__items {
-			grid-template-columns: 270px;
-			row-gap: 20px;
-		}
-	}
+	// .skills {
+	// 	&__items {
+	// 		grid-template-columns: 270px;
+	// 		row-gap: 20px;
+	// 	}
+	// }
 }

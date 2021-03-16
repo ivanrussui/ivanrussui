@@ -81,15 +81,21 @@
 
 	&__input {
 		position: relative;
+		border: none;
+		// &:active {
+		// 	border: 3px solid blue;
+		// }
 		input {
 			width: 100%;
 			height: 100%;
 			padding: 0 20px;
 			font-size: 12px;
+			
 			// font-weight: 500;
 			// line-height: 18px;
 			// color: black;
 		}
+	
 	}
 	&__textarea {
 		grid-column: 1 / 3;
@@ -138,4 +144,14 @@
 }
 .error, #checkbox {
 	border: 1px solid red;
+}
+
+// input {
+// 	border: 2px solid blue;
+// }
+input, textarea {
+	outline: none;
+}
+input:focus, textarea:focus {
+	border: 2px solid $main-color;
 }

@@ -170,7 +170,29 @@
 			<div class="about__wrap">
 
 				<div class="about__photo">
-					<img src="img/main_photo.jpg" alt="photo">
+					<!-- <img srcset="img/main_photo-min.jpg 400w,
+							img/main_photo.jpg 500w"
+						sizes="(max-width: 576px) 380px,
+							(min-width: 577px) 500px"
+					src="img/main_photo.jpg" alt="photo"> -->
+
+					<!-- <picture>
+						<source media="(max-width: 576px)" srcset="img/main_photo-min.jpg">
+						<source media="(min-width: 577px)" srcset="img/main_photo.jpg">
+						<img src="img/main_photo.jpg" alt="photo">
+					</picture> -->
+
+					<picture>
+						<source media="(max-width: 576px)" srcset="img/main_photo-min.jpg">
+						<source type="image/webp" media="(min-width: 577px)" srcset="img/main_photo.webp">
+						<img src="img/main_photo.jpg" alt="photo">
+					</picture>
+					<!-- <picture>
+						<source type="image/webp" media="(max-width: 576px)" srcset="img/main_photo-min.webp">
+						<source type="image/webp" media="(min-width: 577px)" srcset="img/main_photo.webp">
+						<img src="img/main_photo.jpg" alt="photo">
+					</picture> -->
+
 				</div>
 
 				<div class="about__descr">
@@ -445,7 +467,7 @@
 		</div>
 	</section>
 
-	<!-- <section class="portfolio">
+	<section class="portfolio">
 		<div class="container">
 			<h2 class="title title_fz16 title__section-title">Портфолио</h2>
 			<div class="title title_fz36 title__section-subtitle">Мои работы</div>
@@ -478,9 +500,9 @@
 
 			</div>
 		</div>
-	</section> -->
+	</section>
 
-	<!-- <section class="price">
+	<section class="price">
 		<div class="container">
 			<h2 class="title title_fz16 title__section-title">Прайс-лист</h2>
 			<div class="divider"></div>
@@ -518,9 +540,9 @@
 					</div>
 			</div>
 		</div>
-	</section> -->
+	</section>
 
-	<section class="contacts">
+	<!-- <section class="contacts">
 		<div class="container">
 			<div class="contacts__wrap">
 				<div class="contacts__photo">
@@ -582,7 +604,7 @@
 							<textarea name="text" id="text"></textarea>
 							<label class="label_basic" for="text">Ваше сообщение</label>
 						</div>
-						<button data-modal="modal" class="btn contacts__btn">Отправить сообщение</button>
+						<button class="btn contacts__btn">Отправить сообщение</button>
 						<div class="contacts__policy">
 							<input name="checkbox" id="checkbox" type="checkbox">
 							<span>Я согласен(а) с <br> <a target="_blank" href="/policy.html">политикой конфиденциальности</a> </span>
@@ -592,10 +614,10 @@
 				</div>
 			</div>
 		</div>
-	</section>
+	</section> -->
 
 	<div class="overlay">
-		<div class="modal" id="modal">
+		<div class="modal" id="thanks">
 			<div class="modal__close">&times;</div>
 			<div class="modal__title title_fz20">Спасибо!</div>
 			<div class="modal__subtitle title_fz20">Я свяжусь с вами в ближайшее время.</div>

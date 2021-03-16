@@ -67,7 +67,7 @@ $(document).ready(function () {
       data: $(this).serialize(),
     }).done(function () {
       $(this).find('input').val('');
-      $('.overlay, #modal').slideDown('slow');
+      $('.overlay, #thanks').slideDown('slow');
 
       $('form').trigger('reset');
     });
@@ -75,8 +75,14 @@ $(document).ready(function () {
   });
 
   // modal при отправки письма
+
+	// $('.contacts__btn').on('click', function () {
+  //   $('.overlay, #thanks').slideDown('slow');
+  // });
+	// этот скрипт не нужен так как он срабатывая игнорирует валидацию
+
   $('.modal__close').on('click', function () {
-    $('.overlay, #modal').slideUp(400);
+    $('.overlay, #thanks').slideUp(500);
   });
 
 });
