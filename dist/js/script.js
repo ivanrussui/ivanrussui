@@ -21,6 +21,7 @@ counters.forEach((item, i) => {
 
 // jQuery плагины
 $(document).ready(function () {
+
   // Validate
   function validateForms(form) {
     $(form).validate({
@@ -55,7 +56,7 @@ $(document).ready(function () {
   $('form').submit(function (e) {
     e.preventDefault();
 
-    // это условие чтобы письмо пустым не отправлялось
+    // это условие внутри Ajax чтобы письмо пустым не отправлялось
     if (!$(this).valid()) {
       return;
     }
@@ -66,16 +67,16 @@ $(document).ready(function () {
       data: $(this).serialize(),
     }).done(function () {
       $(this).find('input').val('');
+      $('.overlay, #modal').slideDown('slow');
 
       $('form').trigger('reset');
     });
     return false;
   });
 
-  // modal
-  // $('[data-modal=modal]').slideUp(700);
-
-  $('[data-modal=modal]').on('click', function () {
-    $('.overlay, #modal').slideUp(700);
+  // modal при отправки письма
+  $('.modal__close').on('click', function () {
+    $('.overlay, #modal').slideUp(400);
   });
+
 });
