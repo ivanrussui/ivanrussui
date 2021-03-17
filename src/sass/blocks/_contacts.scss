@@ -110,6 +110,13 @@
 	}
 	&__btn {
 		border: none;
+		// &:active {
+		// 	outline: none;
+		// }
+		&:focus {
+			outline: none;
+		}
+		
 		// padding: 12px 26px;
 	}
 	&__policy {
@@ -124,6 +131,11 @@
 			}
 		}
 	}
+}
+
+#checkbox {
+	position: relative;
+	top: 2px;
 }
 
 #checkbox-error {
