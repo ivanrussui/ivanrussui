@@ -11,6 +11,15 @@ closeBtn.addEventListener('click', () => {
   menu.classList.remove('active');
 });
 
+// внутри бургера при переходе по ссылкам на стр закрытие бургера
+// в общем тут похоже нужен цикл чтобы через querySelectorAll работало для всех
+// let	menuLink = document.querySelector('.menu__link > a');
+// console.log(menuLink);
+
+// menuLink.addEventListener('click', () => {
+// 	menu.classList.remove('active');
+// });
+
 // автоматический пересчет процентов
 const counters = document.querySelectorAll('.skills__ratings-counter'),
   lines = document.querySelectorAll('.skills__ratings-line span');
