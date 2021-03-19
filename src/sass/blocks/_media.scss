@@ -183,6 +183,28 @@
 }
 
 @media (max-width: 768px) {
+	.hamburger:hover span {
+		background: $text-color;
+	}
+	.menu {
+		&__close:hover path {
+		fill: $text-color;
+		}
+		&__link {
+			&:hover::before {
+					background-color: $background-color;
+				}
+			a:hover {
+				text-decoration: none;
+			}
+		}
+		&__social a:hover svg path {
+			fill: $text-color;
+		}
+	}
+	.btn:hover {
+		color: $text-color;
+	}
 	.divider {
 		margin: 15px auto 20px;
 	}
@@ -290,9 +312,6 @@
 		&__subtitle {
 			text-align: center;
 		}
-		.divider {
-			margin: 0 auto;
-		}
 		&__text {
 			text-align: center;
 		}
@@ -319,7 +338,17 @@
 			// left: 50%;
 			// transform: translate(-50%, 0);
 		}
+		&__link:hover svg path {
+			fill: black;
+		}
+		&__policy a:hover {
+			text-decoration: none;
+		}
+		.divider {
+			margin: 0 auto;
+		}
 	}
+	
 	#checkbox-error {
 		left: 50%;
 		transform: translateX(-50%);
