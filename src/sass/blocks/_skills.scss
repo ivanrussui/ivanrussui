@@ -4,7 +4,7 @@
 		display: grid;
 		padding: 0 10px;
 		grid-template-columns: repeat(4, 270px);
-		grid-template-rows: repeat(2, minmax(270px, auto));
+		grid-template-rows: minmax(270px, auto);
 		grid-auto-rows: minmax(270px, auto);
 		gap: 13px;
 		// justify-content: center;

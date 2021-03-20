@@ -37,7 +37,8 @@
 	.skills {
 		&__items {
 			justify-content: space-evenly;
-			grid-template-columns: repeat(auto-fit, 270px);
+			grid-template-columns: repeat(2, 270px);
+			gap: 20px;
 		}
 		&__ratings {
 			justify-content: space-evenly;
@@ -270,7 +271,8 @@
 	.skills {
 		padding-top: 40px;
 		&__items {
-			gap: 20px;
+			grid-template-columns: repeat(auto-fit, 270px);
+			// gap: 20px;
 		}
 		&__ratings {
 			grid-template-columns: 300px;
