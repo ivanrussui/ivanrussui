@@ -12,12 +12,12 @@ closeBtn.addEventListener('click', () => {
 });
 
 // внутри бургера при переходе по ссылкам на стр закрытие бургера
-let	menuLink = document.querySelectorAll('.menu__link > a');
+let menuLink = document.querySelectorAll('.menu__link > a');
 
 for (let i = 0; i < menuLink.length; i++) {
-	menuLink[i].addEventListener('click', function() {
-		menu.classList.remove('active');
-	});
+  menuLink[i].addEventListener('click', function () {
+    menu.classList.remove('active');
+  });
 }
 
 // автоматический пересчет процентов
@@ -30,7 +30,6 @@ counters.forEach((item, i) => {
 
 // jQuery плагины
 $(document).ready(function () {
-
   // Validate
   function validateForms(form) {
     $(form).validate({
@@ -85,13 +84,28 @@ $(document).ready(function () {
 
   // modal при отправки письма
 
-	// $('.contacts__btn').on('click', function () {
+  // $('.contacts__btn').on('click', function () {
   //   $('.overlay, #thanks').slideDown('slow');
   // });
-	// этот скрипт не нужен так как он срабатывая игнорирует валидацию
+  // этот скрипт не нужен так как он срабатывая игнорирует валидацию
 
   $('.modal__close').on('click', function () {
     $('.overlay, #thanks').slideUp(500);
   });
 
+  // кнопка наверх
+  $(window).scroll(function () {
+    if ($(this).scrollTop() > 800) {
+      $('.pageup').fadeIn();
+    } else {
+      $('.pageup').fadeOut();
+    }
+  });
+
+  // плавность перехода по всем ссылкам на сайте
+  $("a[href^='#']").click(function () {
+    const _href = $(this).attr('href');
+    $('html, body').animate({ scrollTop: $(_href).offset().top + 'px' });
+    return false;
+  });
 });

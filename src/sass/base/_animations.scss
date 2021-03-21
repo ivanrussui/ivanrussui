@@ -1,0 +1,84 @@
+@keyframes skill {
+	from {
+		transform: scale(1);
+	}
+	50% {
+		transform: scale(1.4);
+	}
+	to {
+		transform: scale(1);
+	}
+}
+
+@keyframes webdev {
+	from {
+		transform: translate(0, 0);
+	}
+	50% {
+		transform: translate(-10px, 10px);
+	}
+	to {
+		transform: translate(0, 0);
+	}
+}
+
+@keyframes myname {
+	from {
+		transform: skewX(0);
+	}
+	50% {
+		transform: skewX(-15deg);
+	}
+	to {
+		transform: skewX(0);
+	}
+}
+
+@keyframes btns {
+	from {
+		transform: rotate(0);
+	}
+	50% {
+		transform: rotate(360deg);
+	}
+	to {
+		transform: rotate(0);
+	}
+}
+
+@keyframes rating {
+	from {
+		width: 0;
+		
+	}
+	50% {
+		// width: 50%;
+		// background-color: $main-color;
+	}
+	to {
+		// background-color: $main-color;
+	}
+}
+// @keyframes rating {
+// 	from {
+// 		transform: ease(0);
+// 	}
+// 	50% {
+// 		// transform: ease(1);
+// 	}
+// 	to {
+// 		background-color: $main-color;
+// 	}
+// }
+
+@keyframes contacts {
+	from {
+		transform: scaleX(1);
+	}
+	50% {
+		transform: scaleX(0.9);
+	}
+	to {
+		transform: scaleX(1);
+	}
+}

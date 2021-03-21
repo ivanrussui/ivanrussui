@@ -35,10 +35,11 @@
 	&__ratings {
 		margin-top: 120px;
 		display: grid;
-		grid-template-columns: repeat(3, 350px);
+		grid-template-columns: repeat(2, 350px);
 		grid-template-rows: repeat(2, minmax(70px, auto));
-		column-gap: 45px;
+		// column-gap: 45px;
 		row-gap: 30px;
+		justify-content: space-evenly;
 		&-item {
 			display: grid;
 			grid-template-columns: 200px 35px;
@@ -63,12 +64,32 @@
 			background-color: #e8e4de;
 			border-radius: 4px;
 			grid-column: 1 / 3;
+			
 			span {
 				display: block;
 				height: 100%;
 				background-color: $main-color;
 				border-radius: 4px;
+				animation: rating 3.5s infinite ease-in-out;
 			}
 		}
 	}
 }
+
+
+// @keyframes rating {
+// 	0% {
+// 		transform: translateX(0);
+// 		background-color: #6d33ff;
+// 		// left: 0%;
+// 	}
+// 	50% {
+// 		background-color: #6d33ff;
+// 		// left: 50px;
+// 	}
+// 	100% {
+// 		background-color: #6d33ff;
+// 		// left: 100%;
+// 		transform: translateX(1);
+// 	}
+// }

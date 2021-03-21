@@ -31,7 +31,7 @@
 	.resume {
 		&__wrap {
 			padding: 0 35px;
-			column-gap: 40px
+			column-gap: 40px;
 		}
 	}
 	.skills {
@@ -41,10 +41,10 @@
 			gap: 20px;
 		}
 		&__ratings {
-			justify-content: space-evenly;
+			// justify-content: space-evenly;
 			grid-template-columns: repeat(auto-fit, 350px);
 			grid-auto-rows: minmax(70px, auto);
-			row-gap: 40px;
+			// row-gap: 30px;
 		}
 	}
 	.portfolio {
@@ -53,7 +53,8 @@
 			grid-auto-rows: 280px;
 			justify-content: space-evenly;
 			row-gap: 13px;
-			.vertical, .horizontal {
+			.vertical,
+			.horizontal {
 				grid-row: unset;
 				grid-column: unset;
 			}
@@ -173,28 +174,34 @@
 		}
 	}
 	// #one {
-		// margin-top: 25px;
-		// grid-column: 1 / 2;
+	// margin-top: 25px;
+	// grid-column: 1 / 2;
 	// }
 	// #two {
-		// margin-top: 25px;
-		// grid-row: 2 / 3;
-		// grid-column: 1 / 2;
+	// margin-top: 25px;
+	// grid-row: 2 / 3;
+	// grid-column: 1 / 2;
 	// }
 }
 
 @media (max-width: 768px) {
+	.pageup {
+		bottom: 7px;
+		&:hover svg path {
+			fill: #000;
+		}
+	}
 	.hamburger:hover span {
 		background: $text-color;
 	}
 	.menu {
 		&__close:hover path {
-		fill: $text-color;
+			fill: $text-color;
 		}
 		&__link {
 			&:hover::before {
-					background-color: $background-color;
-				}
+				background-color: $background-color;
+			}
 			a:hover {
 				text-decoration: none;
 			}
@@ -205,6 +212,7 @@
 	}
 	.btn:hover {
 		color: $text-color;
+		// animation: none;
 	}
 	.divider {
 		margin: 15px auto 20px;
@@ -222,6 +230,7 @@
 		}
 	}
 
+
 	.promo {
 		background-position: 85%;
 		&__title {
@@ -229,6 +238,9 @@
 			line-height: 39px;
 			margin-right: 0;
 		}
+		// &__btns:hover {
+		// 	animation: none;
+		// } 
 	}
 	.about {
 		padding-top: 40px;
@@ -282,6 +294,10 @@
 		padding-top: 40px;
 		&__wrap {
 			row-gap: 20px;
+		}
+		&__item:hover {
+			filter: none;
+			transform: none;
 		}
 	}
 	.price {
@@ -350,7 +366,7 @@
 			margin: 0 auto;
 		}
 	}
-	
+
 	#checkbox-error {
 		left: 50%;
 		transform: translateX(-50%);
@@ -359,7 +375,6 @@
 }
 
 @media (max-width: 576px) {
-
 	.container {
 		width: 100%;
 		padding: 0 10px;
@@ -435,13 +450,16 @@
 			grid-template-columns: 300px;
 		}
 		&__item {
-			column-gap:	5px;
+			column-gap: 5px;
 		}
 	}
 	.contacts {
 		&__wrap {
 			grid-template-columns: 300px;
 		}
+		// &__btn {
+		// 	width: 220px;
+		// }
 	}
 	// #checkbox-error {
 	// 	left: 0px;

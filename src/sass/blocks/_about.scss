@@ -54,6 +54,12 @@
 			&:before {
 				top: 0;
 			}
+			img {
+				animation: skill 2s infinite;
+				// animation-name: skill;
+				// animation-duration: 2s;
+				// animation-iteration-count: infinite;
+			}
 		}
 		&-text {
 			margin-top: 6px;

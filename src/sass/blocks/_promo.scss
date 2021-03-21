@@ -9,12 +9,14 @@
 		width: 535px;
 		margin-top: 10px;
 		color: $text-color;
+		animation: webdev 1s 2;
 	}
 	&__subtitle {
 		position: relative;
 		padding-left: 10px;
 		z-index: 0;
 		color: $text-color;
+		animation: myname 1.5s 2;
 		@include before_circle;
 	}
 	&__btns {
@@ -23,14 +25,19 @@
 		align-items: center;
 		justify-content: space-between;
 		width: 300px;
-	}
+	// 	a {
+	// 		&:hover {
+	// 			animation: btns 3s 1;
+	// 	}
+	// }
 	// &__link {
 	// 	color: $text-color;
 	// 	font-weight: bold;
-	// 	&:hover {
+		// &:hover {
+		// 	animation: btns 2s 1;
 	// 		color: $hover-color;
 	// 		text-decoration: none;
 	// 		transition: all .7s;
-	// 	}
-	// }
+		// }
+	}
 }
