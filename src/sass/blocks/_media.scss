@@ -188,7 +188,7 @@
 	.pageup {
 		bottom: 7px;
 		&:hover svg path {
-			fill: #000;
+			fill: $main-color;
 		}
 	}
 	.hamburger:hover span {
