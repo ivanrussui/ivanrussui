@@ -46,7 +46,8 @@
 	<meta name="msapplication-TileColor" content="#ffffff">
 	<meta name="msapplication-TileImage" content="icons/favicon/ms-icon-144x144.png">
 	<meta name="theme-color" content="#ffffff">
-
+	<!-- <link rel="preload" href="/fonts/Poppins-Medium.woff">
+	<link rel="preload" href="/fonts/Poppins-Bold.woff"> -->
 	<link rel="stylesheet" href="css/style.min.css">
 </head>
 
@@ -194,16 +195,22 @@
 						sizes="(max-width: 576px) 380px,
 							(min-width: 577px) 500px"
 					src="img/main_photo.jpg" alt="photo"> -->
-
 					<!-- <picture>
 						<source media="(max-width: 576px)" srcset="img/main_photo-min.jpg">
 						<source media="(min-width: 577px)" srcset="img/main_photo.jpg">
 						<img src="img/main_photo.jpg" alt="photo">
 					</picture> -->
-
+					<!-- <picture>
+						<source type="image/webp" srcset="img/main_photo.webp">
+						<source type="image/jp2" srcset="img/main_photo.jp2">
+						<img src="img/main_photo.jpg" alt="photo">
+					</picture> -->
 					<picture>
+						<source type="image/webp" media="(max-width: 576px)" srcset="img/main_photo-min.webp">
+						<source type="image/jp2" media="(max-width: 576px)" srcset="img/main_photo-min.jp2">
 						<source media="(max-width: 576px)" srcset="img/main_photo-min.jpg">
 						<source type="image/webp" media="(min-width: 577px)" srcset="img/main_photo.webp">
+						<source type="image/jp2" media="(min-width: 577px)" srcset="img/main_photo.jp2">
 						<img src="img/main_photo.jpg" alt="photo">
 					</picture>
 					<!-- <picture>
@@ -530,28 +537,58 @@
 
 			<div class="portfolio__wrap">
 				<a href="https://mortalkombat.ivanrussui.ru/" target="_blank" class="portfolio__item">
-					<img src="img/works/mortalkombat.jpg" alt="mortalkombat">
+					<!-- <img src="img/works/mortalkombat.jpg" alt="mortalkombat"> -->
+					<picture>
+						<source type="image/webp" srcset="img/works/mortalkombat.webp">
+						<source type="image/jp2" srcset="img/works/mortalkombat.jp2">
+						<img src="img/works/mortalkombat.jpg" alt="mortalkombat">
+					</picture>
 				</a>
 
 
 				<a href="https://pulse.ivanrussui.ru/" target="_blank" rel="noopener" class="portfolio__item">
-					<img src="img/works/pulse.jpg" alt="pulse">
+					<!-- <img src="img/works/pulse.jpg" alt="pulse"> -->
+					<picture>
+						<source type="image/webp" srcset="img/works/pulse.webp">
+						<source type="image/jp2" srcset="img/works/pulse.jp2">
+						<img src="img/works/pulse.jpg" alt="pulse">
+					</picture>
 				</a>
 
 				<a href="https://wordpress.ivanrussui.ru/" target="_blank" class="portfolio__item">
-					<img src="img/works/wordpress.jpg" alt="wordpress">
+					<!-- <img src="img/works/wordpress.jpg" alt="wordpress"> -->
+					<picture>
+						<source type="image/webp" srcset="img/works/wordpress.webp">
+						<source type="image/jp2" srcset="img/works/wordpress.jp2">
+						<img src="img/works/wordpress.jpg" alt="wordpress">
+					</picture>
 				</a>
 
 				<a href="https://webstart.ivanrussui.ru/" target="_blank" class="portfolio__item vertical">
-					<img src="img/works/webstart.jpg" alt="webstart">
+					<!-- <img src="img/works/webstart.jpg" alt="webstart"> -->
+					<picture>
+						<source type="image/webp" srcset="img/works/webstart.webp">
+						<source type="image/jp2" srcset="img/works/webstart.jp2">
+						<img src="img/works/webstart.jpg" alt="webstart">
+					</picture>
 				</a>
 
 				<a href="https://uber.ivanrussui.ru/" target="_blank" rel="noopener" class="portfolio__item">
-					<img src="img/works/uber.jpg" alt="uber">
+					<!-- <img src="img/works/uber.jpg" alt="uber"> -->
+					<picture>
+						<source type="image/webp" srcset="img/works/uber.webp">
+						<source type="image/jp2" srcset="img/works/uber.jp2">
+						<img src="img/works/uber.jpg" alt="uber">
+					</picture>
 				</a>
 
 				<a href="https://witcher.ivanrussui.ru/" target="_blank" class="portfolio__item horizontal">
-					<img src="img/works/witcher.jpg" alt="witcher">
+					<!-- <img src="img/works/witcher.jpg" alt="witcher"> -->
+					<picture>
+						<source type="image/webp" srcset="img/works/witcher.webp">
+						<source type="image/jp2" srcset="img/works/witcher.jp2">
+						<img src="img/works/witcher.jpg" alt="witcher">
+					</picture>
 				</a>
 
 			</div>
@@ -602,7 +639,15 @@
 		<div class="container">
 			<div class="contacts__wrap">
 				<div class="contacts__photo">
-					<img src="img/main_photo.jpg" alt="photo">
+						<!-- <img src="img/main_photo.jpg" alt="photo">Ъ -->
+					<picture>
+						<source type="image/webp" media="(max-width: 576px)" srcset="img/main_photo-min.webp">
+						<source type="image/jp2" media="(max-width: 576px)" srcset="img/main_photo-min.jp2">
+						<source media="(max-width: 576px)" srcset="img/main_photo-min.jpg">
+						<source type="image/webp" media="(min-width: 577px)" srcset="img/main_photo.webp">
+						<source type="image/jp2" media="(min-width: 577px)" srcset="img/main_photo.jp2">
+						<img src="img/main_photo.jpg" alt="photo">
+					</picture>
 				</div>
 
 				<div class="contacts__descr">
