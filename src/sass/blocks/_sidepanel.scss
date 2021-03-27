@@ -9,14 +9,23 @@
 	height: 340px;
 	z-index: 3;
 	&__link {
-		&:nth-child(3) svg {
-			transform: rotate(-90deg);
-		}
 		&:hover {
-			svg path {
+			svg	path {
 				fill: red;
 				transition: all .5s;
 			}
+		}
+		&:nth-child(3) svg {
+			transform: rotate(-90deg);
+			// &:hover {				
+			// 	svg {
+			// 		animation: skill 2s 1;
+					
+			// 	}	path {
+			// 		fill: red;
+			// 		transition: all .5s;
+			// 	}
+			// }
 		}
 	}
 	&__divider {

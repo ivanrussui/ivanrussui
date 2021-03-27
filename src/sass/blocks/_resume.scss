@@ -66,6 +66,7 @@
 				position: absolute;
 				left: 15px;
 				top: 15px;
+				animation: skill 2s infinite;
 			}
 		}
 		&-body {
@@ -78,6 +79,9 @@
 		font-size: 12px;
 		line-height: 18px;
 	}
+	// .title__section-subtitle {
+	// 	animation: swap 2s infinite
+	// }
 
 }
 .divider {

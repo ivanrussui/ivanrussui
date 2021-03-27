@@ -27,10 +27,12 @@
 	}
 	&__subtitle {
 		margin: 6px 0 4px;
+		animation: boingInUp 2s 5;
+		animation-delay: 3s;
 	}
 	.divider {
 		@include divider;
-			margin: 0;
+		margin: 0;
 	}
 	&__text {
 		margin-top: 20px;
@@ -68,5 +70,3 @@
 		}
 	}
 }
-
-
