@@ -461,7 +461,13 @@
 		// 	width: 220px;
 		// }
 	}
-	// #checkbox-error {
-	// 	left: 0px;
-	// }
+	.modal {
+		width: 300px;
+		height: 145px;
+		padding: 5px;
+		&__close {
+			top: 1px;
+			right: -3px;
+		}
+	}
 }
