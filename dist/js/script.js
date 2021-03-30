@@ -1,14 +1,17 @@
 // кнопка бургер
 const hamburger = document.querySelector('.hamburger'),
   menu = document.querySelector('.menu'),
-  closeBtn = document.querySelector('.menu__close');
+  closeBtn = document.querySelector('.menu__close'),
+	bodyLock = document.querySelector('body');
 
 hamburger.addEventListener('click', () => {
   menu.classList.add('active');
+	bodyLock.classList.add('lock');
 });
 
 closeBtn.addEventListener('click', () => {
   menu.classList.remove('active');
+	bodyLock.classList.remove('lock');
 });
 
 // внутри бургера при переходе по ссылкам на стр закрытие бургера
@@ -17,6 +20,7 @@ let menuLink = document.querySelectorAll('.menu__link > a');
 for (let i = 0; i < menuLink.length; i++) {
   menuLink[i].addEventListener('click', function () {
     menu.classList.remove('active');
+		bodyLock.classList.remove('lock');
   });
 }
 
@@ -76,6 +80,7 @@ $(document).ready(function () {
     }).done(function () {
       $(this).find('input').val('');
       $('.overlay, #thanks').slideDown('slow');
+			$('body').toggleClass('lock'); // добавляем класс блокирующий прокрутку
 
       $('form').trigger('reset');
     });
@@ -91,6 +96,7 @@ $(document).ready(function () {
 
   $('.modal__close').on('click', function () {
     $('.overlay, #thanks').slideUp(500);
+		$('body').toggleClass('lock'); // убираем класс блок прокрутку
   });
 
   // кнопка наверх

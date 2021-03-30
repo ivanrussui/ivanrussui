@@ -11,6 +11,10 @@
 	margin: 0 auto;
 }
 
+body.lock {
+	overflow: hidden;
+}
+
 
 @import 'blocks/title';
 @import 'blocks/promo';
