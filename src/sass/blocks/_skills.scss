@@ -7,8 +7,6 @@
 		grid-template-rows: minmax(270px, auto);
 		grid-auto-rows: minmax(270px, auto);
 		gap: 13px;
-		// justify-content: center;
-		// align-content: center;
 	}
 	&__item {
 		padding: 30px;
@@ -37,7 +35,6 @@
 		display: grid;
 		grid-template-columns: repeat(2, 350px);
 		grid-template-rows: repeat(2, minmax(70px, auto));
-		// column-gap: 45px;
 		row-gap: 30px;
 		justify-content: space-evenly;
 		&-item {
@@ -74,25 +71,4 @@
 			}
 		}
 	}
-	// .title__section-subtitle {
-	// 	animation: swashIn 2s infinite;
-	// }
 }
-
-
-// @keyframes rating {
-// 	0% {
-// 		transform: translateX(0);
-// 		background-color: #6d33ff;
-// 		// left: 0%;
-// 	}
-// 	50% {
-// 		background-color: #6d33ff;
-// 		// left: 50px;
-// 	}
-// 	100% {
-// 		background-color: #6d33ff;
-// 		// left: 100%;
-// 		transform: translateX(1);
-// 	}
-// }

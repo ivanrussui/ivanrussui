@@ -41,7 +41,6 @@
 	&__block {
 		position: relative;
 		width: 345px;
-		// background-color: $main-color;
 		background-color: $background-color;
 		height: 100%;
 		padding-top: 140px;
@@ -87,7 +86,6 @@
 		a {
 			color: $text-color;
 			&:hover {
-				// text-decoration: underline;
 				text-decoration-color: $hover-color;
 			}
 		}

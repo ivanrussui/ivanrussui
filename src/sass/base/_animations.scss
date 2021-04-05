@@ -34,18 +34,6 @@
 	}
 }
 
-// @keyframes btns {
-// 	from {
-// 		transform: rotate(0);
-// 	}
-// 	50% {
-// 		transform: rotate(360deg);
-// 	}
-// 	to {
-// 		transform: rotate(0);
-// 	}
-// }
-
 @keyframes rating {
 	from {
 		width: 0;
@@ -54,17 +42,6 @@
 		background-color: $main-color;
 	}
 }
-// @keyframes rating {
-// 	from {
-// 		transform: ease(0);
-// 	}
-// 	50% {
-// 		// transform: ease(1);
-// 	}
-// 	to {
-// 		background-color: $main-color;
-// 	}
-// }
 
 @keyframes contacts {
 	from {
@@ -77,18 +54,6 @@
 		transform: scaleX(1);
 	}
 }
-
-// @keyframes soc {
-// 	0% {
-// 		transform: translateX(20px)
-// 	}
-// 	50% {
-// 		transform: skewY(-20deg);
-// 	}
-// 	100% {
-// 		transform: rotate3d(1, 1);
-// 	}
-// }
 
 // анимации из сборки
 @keyframes boingInUp {
@@ -108,46 +73,3 @@
 		transform: perspective(800px) rotateX(0deg);
 	}
 }
-
-// @keyframes swap {
-// 	0% {
-// 		opacity: 0;
-// 		transform-origin: 0 100%;
-// 		transform: scale(0, 0) translate(-700px, 0px);
-// 	}
-// 	100% {
-// 		opacity: 1;
-// 		transform-origin: 100% 100%;
-// 		transform: scale(1, 1) translate(0px, 0px);
-// 	}
-// }
-
-// @keyframes swashIn {
-// 	0% {
-// 		opacity: 0;
-// 		transform-origin: 50% 50%;
-// 		transform: scale(0, 0);
-// 	}
-// 	90% {
-// 		opacity: 1;
-// 		transform-origin: 50% 50%;
-// 		transform: scale(0.9, 0.9);
-// 	}
-// 	100% {
-// 		opacity: 1;
-// 		transform-origin: 50% 50%;
-// 		transform: scale(1, 1);
-// 	}
-// }
-
-
-// @keyframes spaceInRight {
-//   0% {
-//     opacity: 0;
-//     transform-origin: 100% 50%;
-//     transform: scale(0.2) translate(200%, 0%); }
-//   100% {
-//     opacity: 1;
-//     transform-origin: 100% 50%;
-//     transform: scale(1) translate(0%, 0%); } }
-
