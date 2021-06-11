@@ -32,14 +32,18 @@ hamburger.addEventListener('click', () => {
 	title.style.display = 'none';
 	subTitle.style.display = 'none';
 	promoBtn.style.display = 'none';
-	overlayOver.style.opacity = '.2';
+	// overlayOver.style.opacity = '.2';
+	overlayOver.style.cssText = `opacity: .2; cursor: pointer`;
 });
 
 overlayOver.addEventListener('mouseout', () => {
-	overlayOver.style.opacity = '.3';
+	// overlayOver.style.opacity = '.3';
+	overlayOver.style.cssText = `opacity: .3; cursor: pointer`;
+
 });
 overlayOver.addEventListener('mouseover', () => {
-	overlayOver.style.opacity = '.2';
+	// overlayOver.style.opacity = '.2';
+	overlayOver.style.cssText = `opacity: .2; cursor: pointer`;
 });
 
 closeBtn.addEventListener('click', () => {
