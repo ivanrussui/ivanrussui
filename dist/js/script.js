@@ -2,25 +2,66 @@
 const hamburger = document.querySelector('.hamburger'),
   menu = document.querySelector('.menu'),
   closeBtn = document.querySelector('.menu__close'),
-	bodyLock = document.querySelector('body');
+	bodyLock = document.querySelector('body'),
+	subTitle = document.querySelector('.promo__subtitle'),
+	promoBtn = document.querySelector('.promo__btns'),
+	title = document.querySelector('h1'),
+	menuActive = document.querySelector('.menu'),
+	overlayOver = document.querySelector('.menu__overlay'),
+	skills = document.querySelectorAll('.skills__item');
+
+	// console.log(skills);
+// надо написать фо ич чтобы цвет менялся
+// skills.addEventListener('mouseout', () => {
+// 	skills.style.backgroundColor = 'rebeccapurple';
+// });
+// skills.addEventListener('mouseover', () => {
+// 	skills.style.backgroundColor = 'grey';
+// });
+
+overlayOver.addEventListener('click', () => {
+	menuActive.classList.remove('active');
+	title.style.display = 'block';
+	subTitle.style.display = 'block';
+	promoBtn.style.display = 'flex';
+});
 
 hamburger.addEventListener('click', () => {
   menu.classList.add('active');
 	bodyLock.classList.add('lock');
+	title.style.display = 'none';
+	subTitle.style.display = 'none';
+	promoBtn.style.display = 'none';
+	overlayOver.style.opacity = '.2';
+});
+
+overlayOver.addEventListener('mouseout', () => {
+	overlayOver.style.opacity = '.3';
+});
+overlayOver.addEventListener('mouseover', () => {
+	overlayOver.style.opacity = '.2';
 });
 
 closeBtn.addEventListener('click', () => {
   menu.classList.remove('active');
 	bodyLock.classList.remove('lock');
+	title.style.display = 'block';
+	subTitle.style.display = 'block';
+	promoBtn.style.display = 'flex';
 });
 
 // внутри бургера при переходе по ссылкам на стр закрытие бургера
 let menuLink = document.querySelectorAll('.menu__link > a');
 
 for (let i = 0; i < menuLink.length; i++) {
-  menuLink[i].addEventListener('click', function () {
+  menuLink[i].addEventListener('click', () => {
     menu.classList.remove('active');
 		bodyLock.classList.remove('lock');
+		title.style.display = 'block';
+		subTitle.style.display = 'block';
+		promoBtn.style.display = 'flex';
+
+
   });
 }
 
