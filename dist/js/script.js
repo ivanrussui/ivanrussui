@@ -24,6 +24,7 @@ overlayOver.addEventListener('click', () => {
 	title.style.display = 'block';
 	subTitle.style.display = 'block';
 	promoBtn.style.display = 'flex';
+	bodyLock.classList.remove('lock');
 });
 
 hamburger.addEventListener('click', () => {
