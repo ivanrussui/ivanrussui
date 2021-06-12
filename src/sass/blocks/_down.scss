@@ -1,0 +1,12 @@
+.down {
+	position: absolute;
+	bottom: 10%;
+	left: 50%;
+	&__arrow {
+		width: 28px;
+		height: 28px;
+		border-right: 4px solid white;
+		border-bottom: 4px solid white;
+		animation: downArrow 1.7s infinite ease-in-out;
+	}
+}

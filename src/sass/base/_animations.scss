@@ -1,3 +1,39 @@
+@keyframes downArrow {
+	0% {
+		opacity: 0;
+		transform: rotate(45deg) translate(-33px, -33px);
+	}
+	50% {
+		opacity: 1;
+	}
+	100% {
+		opacity: 0;
+		transform: rotate(45deg) translate(33px, 33px);
+	}
+}
+@keyframes leftUpArrow {
+	0% {
+		opacity: 0;
+		transform: rotate(135deg) translate(-33px, -33px);
+	}
+	50% {
+		opacity: 1;
+	}
+	100% {
+		opacity: 0;
+		transform: rotate(135deg) translate(33px, 33px);
+	}
+}
+// 	0% {
+// 		bottom: 10px;
+// 	}
+// 	50% {
+// 		bottom: 5px;
+// 	}
+// 	100% {
+// 		bottom: 0;
+// 	}
+// }
 @keyframes skill {
 	from {
 		transform: scale(1);
@@ -6,6 +42,18 @@
 		transform: scale(1.4);
 	}
 	to {
+		transform: scale(1);
+	}
+}
+
+@keyframes skills {
+	0% {
+		transform: scale(1);
+	}
+	50% {
+		transform: scale(1.25);
+	}
+	100% {
 		transform: scale(1);
 	}
 }
@@ -55,7 +103,7 @@
 	}
 }
 
-// анимации из сборки
+// анимация из сборки
 @keyframes boingInUp {
 	0% {
 		opacity: 0;

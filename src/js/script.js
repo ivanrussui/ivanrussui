@@ -2,57 +2,76 @@
 const hamburger = document.querySelector('.hamburger'),
   menu = document.querySelector('.menu'),
   closeBtn = document.querySelector('.menu__close'),
-	bodyLock = document.querySelector('body'),
-	subTitle = document.querySelector('.promo__subtitle'),
-	promoBtn = document.querySelector('.promo__btns'),
-	title = document.querySelector('h1'),
-	menuActive = document.querySelector('.menu'),
-	overlayOver = document.querySelector('.menu__overlay'),
-	skills = document.querySelectorAll('.skills__item');
+  bodyLock = document.querySelector('body'),
+  subTitle = document.querySelector('.promo__subtitle'),
+  promoBtn = document.querySelector('.promo__btns'),
+  title = document.querySelector('h1'),
+  menuActive = document.querySelector('.menu'),
+  overlayOver = document.querySelector('.menu__overlay'),
+  skills = document.querySelectorAll('.skills__item'),
+  promoSection = document.querySelector('#up'),
+  down = document.createElement('div'),
+  downArrow = document.createElement('div');
 
-	// console.log(skills);
-// надо написать фо ич чтобы цвет менялся
-// skills.addEventListener('mouseout', () => {
-// 	skills.style.backgroundColor = 'rebeccapurple';
-// });
-// skills.addEventListener('mouseover', () => {
-// 	skills.style.backgroundColor = 'grey';
-// });
+promoSection.append(down);
+down.classList.add('down');
 
-overlayOver.addEventListener('click', () => {
-	menuActive.classList.remove('active');
-	title.style.display = 'block';
-	subTitle.style.display = 'block';
-	promoBtn.style.display = 'flex';
-	bodyLock.classList.add('lock');
+down.append(downArrow);
+downArrow.classList.add('down__arrow');
+
+skills.forEach((skills) => {
+  skills.addEventListener('mouseenter', () => {
+    skills.style.cssText = `animation: skills 1.5s 1 ease-in-out; border: 2px solid #6d33ff`;
+  });
 });
+skills.forEach((skills) => {
+  skills.addEventListener('mouseleave', () => {
+    skills.style.cssText = `animation: none; border: 1px solid #000`;
+  });
+});
+
+// overlayOver.addEventListener('click', () => {
+//   menuActive.classList.remove('active');
+//   bodyLock.classList.remove('lock');
+//   title.style.display = 'block';
+//   subTitle.style.display = 'block';
+//   promoBtn.style.display = 'flex';
+// });
 
 hamburger.addEventListener('click', () => {
   menu.classList.add('active');
-	bodyLock.classList.add('lock');
-	title.style.display = 'none';
-	subTitle.style.display = 'none';
-	promoBtn.style.display = 'none';
-	// overlayOver.style.opacity = '.2';
-	overlayOver.style.cssText = `opacity: .2; cursor: pointer`;
+  bodyLock.classList.add('lock');
+  title.style.display = 'none';
+  subTitle.style.display = 'none';
+  promoBtn.style.display = 'none';
+  downArrow.style.display = 'none';
+  // overlayOver.style.cssText = `opacity: .2; cursor: pointer`;
 });
 
 overlayOver.addEventListener('mouseout', () => {
-	// overlayOver.style.opacity = '.3';
-	overlayOver.style.cssText = `opacity: .3; cursor: pointer`;
-
+  overlayOver.style.cssText = `opacity: 0.1`;
+  // downArrow.style.cssText = `display: block; animation: leftUpArrow 1.7s infinite ease-in-out`;
+  // down.style.cssText = `bottom: 50%; left: 30%`;
 });
 overlayOver.addEventListener('mouseover', () => {
-	// overlayOver.style.opacity = '.2';
-	overlayOver.style.cssText = `opacity: .2; cursor: pointer`;
+  overlayOver.style.cssText = `opacity: .8`;
+  // downArrow.style.display = 'none';
+	// down.style.cssText = `bottom: 10%; left: 50%`
 });
 
 closeBtn.addEventListener('click', () => {
   menu.classList.remove('active');
-	bodyLock.classList.remove('lock');
-	title.style.display = 'block';
-	subTitle.style.display = 'block';
-	promoBtn.style.display = 'flex';
+  bodyLock.classList.remove('lock');
+  title.style.display = 'block';
+  subTitle.style.display = 'block';
+  promoBtn.style.display = 'flex';
+	downArrow.style.cssText = `display: block`;
+	// downArrow.style.cssText = `animation: downArrow 2s infinite;`;
+  // down.style.cssText = `display: none`;
+	// down.style.animation = 'none';
+	// downArrow.style.display = 'none';
+	// downArrow.style.cssText = `display: none; animation: none`;
+	// downArrow.style.cssText = `display: block; animation: downArrow 1.7s infinite ease-in-out`;
 });
 
 // внутри бургера при переходе по ссылкам на стр закрытие бургера
@@ -61,12 +80,11 @@ let menuLink = document.querySelectorAll('.menu__link > a');
 for (let i = 0; i < menuLink.length; i++) {
   menuLink[i].addEventListener('click', () => {
     menu.classList.remove('active');
-		bodyLock.classList.remove('lock');
-		title.style.display = 'block';
-		subTitle.style.display = 'block';
-		promoBtn.style.display = 'flex';
-
-
+    bodyLock.classList.remove('lock');
+    title.style.display = 'block';
+    subTitle.style.display = 'block';
+    promoBtn.style.display = 'flex';
+    downArrow.style.display = 'block';
   });
 }
 
@@ -126,7 +144,7 @@ $(document).ready(function () {
     }).done(function () {
       $(this).find('input').val('');
       $('.overlay, #thanks').slideDown('slow');
-			$('body').toggleClass('lock'); // добавляем класс блокирующий прокрутку
+      $('body').toggleClass('lock'); // добавляем класс блокирующий прокрутку
 
       $('form').trigger('reset');
     });
@@ -142,7 +160,7 @@ $(document).ready(function () {
 
   $('.modal__close').on('click', function () {
     $('.overlay, #thanks').slideUp(500);
-		$('body').toggleClass('lock'); // убираем класс блок прокрутку
+    $('body').toggleClass('lock'); // убираем класс блок прокрутку
   });
 
   // кнопка наверх
