@@ -48,6 +48,41 @@ hamburger.addEventListener('click', () => {
   // overlayOver.style.cssText = `opacity: .2; cursor: pointer`;
 });
 
+// closeBtn.addEventListener('click', () => {
+//   menu.classList.remove('active');
+//   bodyLock.classList.remove('lock');
+//   title.style.display = 'block';
+//   subTitle.style.display = 'block';
+//   promoBtn.style.display = 'flex';
+// 	downArrow.style.cssText = `display: block`;
+// 	// downArrow.style.cssText = `animation: downArrow 2s infinite;`;
+//   // down.style.cssText = `display: none`;
+// 	// down.style.animation = 'none';
+// 	// downArrow.style.display = 'none';
+// 	// downArrow.style.cssText = `display: none; animation: none`;
+// 	// downArrow.style.cssText = `display: block; animation: downArrow 1.7s infinite ease-in-out`;
+// });
+
+// пишу closeBtn в функцию closeMenu чтобы код не повторялся и переиспольз функцию
+function closeMenu() {
+	menu.classList.remove('active');
+  bodyLock.classList.remove('lock');
+  title.style.display = 'block';
+  subTitle.style.display = 'block';
+  promoBtn.style.display = 'flex';
+	downArrow.style.cssText = `display: block`;
+}
+
+closeBtn.addEventListener('click', closeMenu);
+
+	// закрытие menu при нажатии Esc
+	document.addEventListener('keydown', (e) => {
+		// eventcode у Esc - Escape && чтобы функ closeMenu() вызывалась только когда menu открыто
+		if (e.code === 'Escape' && menu.classList.contains('active')) {
+			closeMenu();
+		}
+	});
+
 overlayOver.addEventListener('mouseout', () => {
   overlayOver.style.cssText = `opacity: 0.1`;
   // downArrow.style.cssText = `display: block; animation: leftUpArrow 1.7s infinite ease-in-out`;
@@ -59,20 +94,7 @@ overlayOver.addEventListener('mouseover', () => {
 	// down.style.cssText = `bottom: 10%; left: 50%`
 });
 
-closeBtn.addEventListener('click', () => {
-  menu.classList.remove('active');
-  bodyLock.classList.remove('lock');
-  title.style.display = 'block';
-  subTitle.style.display = 'block';
-  promoBtn.style.display = 'flex';
-	downArrow.style.cssText = `display: block`;
-	// downArrow.style.cssText = `animation: downArrow 2s infinite;`;
-  // down.style.cssText = `display: none`;
-	// down.style.animation = 'none';
-	// downArrow.style.display = 'none';
-	// downArrow.style.cssText = `display: none; animation: none`;
-	// downArrow.style.cssText = `display: block; animation: downArrow 1.7s infinite ease-in-out`;
-});
+
 
 // внутри бургера при переходе по ссылкам на стр закрытие бургера
 let menuLink = document.querySelectorAll('.menu__link > a');
