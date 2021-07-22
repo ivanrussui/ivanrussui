@@ -13,6 +13,8 @@ const hamburger = document.querySelector('.hamburger'),
   down = document.createElement('div'),
   downArrow = document.createElement('div');
 
+
+
 promoSection.append(down);
 down.classList.add('down');
 
@@ -48,6 +50,44 @@ hamburger.addEventListener('click', () => {
   // overlayOver.style.cssText = `opacity: .2; cursor: pointer`;
 });
 
+
+
+// closeBtn.addEventListener('click', () => {
+//   menu.classList.remove('active');
+//   bodyLock.classList.remove('lock');
+//   title.style.display = 'block';
+//   subTitle.style.display = 'block';
+//   promoBtn.style.display = 'flex';
+//   downArrow.style.cssText = `display: block`;
+//   // downArrow.style.cssText = `animation: downArrow 2s infinite;`;
+//   // down.style.cssText = `display: none`;
+//   // down.style.animation = 'none';
+//   // downArrow.style.display = 'none';
+//   // downArrow.style.cssText = `display: none; animation: none`;
+//   // downArrow.style.cssText = `display: block; animation: downArrow 1.7s infinite ease-in-out`;
+// });
+
+// функция чтобы код не дублировать с закрытием меню (написанный выше)
+function closeMenu() {
+	menu.classList.remove('active');
+  bodyLock.classList.remove('lock');
+  title.style.display = 'block';
+  subTitle.style.display = 'block';
+  promoBtn.style.display = 'flex';
+  downArrow.style.cssText = `display: block`;
+}
+
+// закрытие меню включающее функцию closeMenu
+closeBtn.addEventListener('click', closeMenu);
+
+// закрытие меню при нажатии Esc
+document.addEventListener('keydown', (e) => {
+  // eventcode у Esc - Escape && чтобы вызывалась только когда модальн окно открыто
+  if (e.code === 'Escape' && menu.classList.contains('active')) {
+		closeBtn();
+  }
+});
+
 overlayOver.addEventListener('mouseout', () => {
   overlayOver.style.cssText = `opacity: 0.1`;
   // downArrow.style.cssText = `display: block; animation: leftUpArrow 1.7s infinite ease-in-out`;
@@ -56,23 +96,9 @@ overlayOver.addEventListener('mouseout', () => {
 overlayOver.addEventListener('mouseover', () => {
   overlayOver.style.cssText = `opacity: .8`;
   // downArrow.style.display = 'none';
-	// down.style.cssText = `bottom: 10%; left: 50%`
+  // down.style.cssText = `bottom: 10%; left: 50%`
 });
 
-closeBtn.addEventListener('click', () => {
-  menu.classList.remove('active');
-  bodyLock.classList.remove('lock');
-  title.style.display = 'block';
-  subTitle.style.display = 'block';
-  promoBtn.style.display = 'flex';
-	downArrow.style.cssText = `display: block`;
-	// downArrow.style.cssText = `animation: downArrow 2s infinite;`;
-  // down.style.cssText = `display: none`;
-	// down.style.animation = 'none';
-	// downArrow.style.display = 'none';
-	// downArrow.style.cssText = `display: none; animation: none`;
-	// downArrow.style.cssText = `display: block; animation: downArrow 1.7s infinite ease-in-out`;
-});
 
 // внутри бургера при переходе по ссылкам на стр закрытие бургера
 let menuLink = document.querySelectorAll('.menu__link > a');
