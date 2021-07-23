@@ -1,4 +1,3 @@
-// кнопка бургер
 const hamburger = document.querySelector('.hamburger'),
   menu = document.querySelector('.menu'),
   closeBtn = document.querySelector('.menu__close'),
@@ -13,17 +12,21 @@ const hamburger = document.querySelector('.hamburger'),
   down = document.createElement('div'),
   downArrow = document.createElement('div');
 
+// добавляю в разметку down и добавляю ему класс 'down'
 promoSection.append(down);
 down.classList.add('down');
 
+// добавляю в разметку downArrow и добавляю ему класс 'down__arrow'
 down.append(downArrow);
 downArrow.classList.add('down__arrow');
 
+// перебираю и вешаю обработчик mouseenter и добавляю стили 
 skills.forEach((skills) => {
   skills.addEventListener('mouseenter', () => {
     skills.style.cssText = `animation: skills 1.5s 1 ease-in-out; border: 2px solid #6d33ff`;
   });
 });
+
 skills.forEach((skills) => {
   skills.addEventListener('mouseleave', () => {
     skills.style.cssText = `animation: none; border: 1px solid #000`;
@@ -38,6 +41,7 @@ skills.forEach((skills) => {
 //   promoBtn.style.display = 'flex';
 // });
 
+// при клике на гамбургер доб стили
 hamburger.addEventListener('click', () => {
   menu.classList.add('active');
   bodyLock.classList.add('lock');
@@ -48,6 +52,7 @@ hamburger.addEventListener('click', () => {
   // overlayOver.style.cssText = `opacity: .2; cursor: pointer`;
 });
 
+// при клике на закрытие гамбургера убираю стили
 // closeBtn.addEventListener('click', () => {
 //   menu.classList.remove('active');
 //   bodyLock.classList.remove('lock');
@@ -83,6 +88,7 @@ closeBtn.addEventListener('click', closeMenu);
 		}
 	});
 
+// при mouseout меняю опасити
 overlayOver.addEventListener('mouseout', () => {
   overlayOver.style.cssText = `opacity: 0.1`;
   // downArrow.style.cssText = `display: block; animation: leftUpArrow 1.7s infinite ease-in-out`;
@@ -93,7 +99,6 @@ overlayOver.addEventListener('mouseover', () => {
   // downArrow.style.display = 'none';
 	// down.style.cssText = `bottom: 10%; left: 50%`
 });
-
 
 
 // внутри бургера при переходе по ссылкам на стр закрытие бургера
