@@ -20,7 +20,7 @@ const hamburger = document.querySelector('.hamburger'),
 	// console.log(document.documentElement.scrollTop);
 
 // активирую анимацию boingInUp при скролле 200
-window.addEventListener('scroll', function() {
+window.addEventListener('scroll', () => {
 	if (window.pageYOffset >= '200') {
 		aboutSubtitle.style.cssText = `animation: boingInUp 2s 3; animation-delay: 1s;`;
 	}
@@ -67,14 +67,7 @@ hamburger.addEventListener('click', () => {
   // overlayOver.style.cssText = `opacity: .2; cursor: pointer`;
 });
 
-// при открытом гамбургере если кликнуть на обвертку, гамбургер закрывается
-overlayOver.addEventListener('click', () => {
-  menuActive.classList.remove('active');
-  bodyLock.classList.remove('lock');
-  title.style.display = 'block';
-  subTitle.style.display = 'block';
-  promoBtn.style.display = 'flex';
-});
+
 
 // при клике на закрытие гамбургера убираю стили
 // closeBtn.addEventListener('click', () => {
@@ -103,6 +96,9 @@ function closeMenu() {
 }
 // при клике closeBtn (закрытие гамбургера) активирую функ closeMenu 
 closeBtn.addEventListener('click', closeMenu);
+
+// при открытом гамбургере если кликнуть на обвертку, гамбургер закрывается
+overlayOver.addEventListener('click', closeMenu);
 
 // закрытие menu при нажатии Esc
 document.addEventListener('keydown', (e) => {
