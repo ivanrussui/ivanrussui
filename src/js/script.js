@@ -10,7 +10,28 @@ const hamburger = document.querySelector('.hamburger'),
   skills = document.querySelectorAll('.skills__item'),
   promoSection = document.querySelector('#up'),
   down = document.createElement('div'),
-  downArrow = document.createElement('div');
+  downArrow = document.createElement('div'),
+	contactsSubtitle = document.querySelector('.contacts__subtitle'),
+	aboutSubtitle = document.querySelector('.about__subtitle');
+
+	// получаю координаты страницы
+	// console.log(aboutSubtitle.getBoundingClientRect());
+	// получаю координаты скока юзер проскроллил и на основании этой высоты делаю анимацию с событ скролл
+	// console.log(document.documentElement.scrollTop);
+
+// активирую анимацию boingInUp при скролле 200
+window.addEventListener('scroll', function() {
+	if (window.pageYOffset >= '200') {
+		aboutSubtitle.style.cssText = `animation: boingInUp 2s 3; animation-delay: 1s;`;
+	}
+});
+// активирую анимацию contacts при скролле 3200
+window.addEventListener('scroll', () => {
+	if (window.pageYOffset >= '3200') {
+		contactsSubtitle.style.cssText = `animation: contacts 2s 5; animation-delay: 1s;`;
+	}
+});
+
 
 // добавляю в разметку down и добавляю ему класс 'down'
 promoSection.append(down);
@@ -20,7 +41,7 @@ down.classList.add('down');
 down.append(downArrow);
 downArrow.classList.add('down__arrow');
 
-// перебираю и вешаю обработчик mouseenter и добавляю стили 
+// перебираю и вешаю обработчик mouseenter и добавляю стили
 skills.forEach((skills) => {
   skills.addEventListener('mouseenter', () => {
     skills.style.cssText = `animation: skills 1.5s 1 ease-in-out; border: 2px solid #6d33ff`;
@@ -33,13 +54,7 @@ skills.forEach((skills) => {
   });
 });
 
-// overlayOver.addEventListener('click', () => {
-//   menuActive.classList.remove('active');
-//   bodyLock.classList.remove('lock');
-//   title.style.display = 'block';
-//   subTitle.style.display = 'block';
-//   promoBtn.style.display = 'flex';
-// });
+
 
 // при клике на гамбургер доб стили
 hamburger.addEventListener('click', () => {
@@ -50,6 +65,15 @@ hamburger.addEventListener('click', () => {
   promoBtn.style.display = 'none';
   downArrow.style.display = 'none';
   // overlayOver.style.cssText = `opacity: .2; cursor: pointer`;
+});
+
+// при открытом гамбургере если кликнуть на обвертку, гамбургер закрывается
+overlayOver.addEventListener('click', () => {
+  menuActive.classList.remove('active');
+  bodyLock.classList.remove('lock');
+  title.style.display = 'block';
+  subTitle.style.display = 'block';
+  promoBtn.style.display = 'flex';
 });
 
 // при клике на закрытие гамбургера убираю стили
@@ -68,25 +92,25 @@ hamburger.addEventListener('click', () => {
 // 	// downArrow.style.cssText = `display: block; animation: downArrow 1.7s infinite ease-in-out`;
 // });
 
-// пишу closeBtn в функцию closeMenu чтобы код не повторялся и переиспольз функцию
+// пишу closeBtn (закрытие гамбургера) в функцию closeMenu чтобы код не повторялся и переиспольз функцию
 function closeMenu() {
-	menu.classList.remove('active');
+  menu.classList.remove('active');
   bodyLock.classList.remove('lock');
   title.style.display = 'block';
   subTitle.style.display = 'block';
   promoBtn.style.display = 'flex';
-	downArrow.style.cssText = `display: block`;
+  downArrow.style.cssText = `display: block`;
 }
-
+// при клике closeBtn (закрытие гамбургера) активирую функ closeMenu 
 closeBtn.addEventListener('click', closeMenu);
 
-	// закрытие menu при нажатии Esc
-	document.addEventListener('keydown', (e) => {
-		// eventcode у Esc - Escape && чтобы функ closeMenu() вызывалась только когда menu открыто
-		if (e.code === 'Escape' && menu.classList.contains('active')) {
-			closeMenu();
-		}
-	});
+// закрытие menu при нажатии Esc
+document.addEventListener('keydown', (e) => {
+  // eventcode у Esc - Escape && чтобы функ closeMenu() вызывалась только когда menu открыто
+  if (e.code === 'Escape' && menu.classList.contains('active')) {
+    closeMenu();
+  }
+});
 
 // при mouseout меняю опасити
 overlayOver.addEventListener('mouseout', () => {
@@ -97,9 +121,8 @@ overlayOver.addEventListener('mouseout', () => {
 overlayOver.addEventListener('mouseover', () => {
   overlayOver.style.cssText = `opacity: .8`;
   // downArrow.style.display = 'none';
-	// down.style.cssText = `bottom: 10%; left: 50%`
+  // down.style.cssText = `bottom: 10%; left: 50%`
 });
-
 
 // внутри бургера при переходе по ссылкам на стр закрытие бургера
 let menuLink = document.querySelectorAll('.menu__link > a');
