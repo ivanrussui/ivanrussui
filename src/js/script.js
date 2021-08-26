@@ -13,11 +13,14 @@ const hamburger = document.querySelector('.hamburger'),
 	downArrow = document.createElement('div'),
 	contactsSubtitle = document.querySelector('.contacts__subtitle'),
 	aboutSubtitle = document.querySelector('.about__subtitle'),
+	side = document.querySelector('.sidepanel'),
 	sideDivider = document.querySelector('.sidepanel__divider'),
 	sideText = document.querySelector('.sidepanel__text > span'),
 	sideLink = document.querySelectorAll('.sidepanel__link');
 
 // console.log(sideLink);
+
+
 
 // получаю координаты страницы
 // console.log(sideText.getBoundingClientRect());
@@ -32,51 +35,51 @@ const hamburger = document.querySelector('.hamburger'),
 
 
 // ! изменение цвета боковых ссылок при скролле, все 3 варианта меняют цвет только 1 элементу 
-window.addEventListener('scroll', () => {
-		if (window.pageYOffset >= '200') {
-			sideLink.forEach(item => {
-				item.style.cssText = 'color: #6d33ff';
-			});
-		} else {
-			sideLink.forEach(item => {
-				item.style.cssText = 'color: black';
-			});
-		}
-});
 // window.addEventListener('scroll', () => {
-// 	sideLink.forEach(item => {
 // 		if (window.pageYOffset >= '200') {
-// 			item.style.cssText = 'color: #6d33ff';
+// 			sideLink.forEach(item => {
+// 				item.style.cssText = 'color: #6d33ff';
+// 			});
 // 		} else {
-// 			item.style.cssText = 'color: black';
+// 			sideLink.forEach(item => {
+// 				item.style.cssText = 'color: black';
+// 			});
 // 		}
-// 	});
 // });
-// sideLink.forEach(item => {
-// 	window.addEventListener('scroll', () => {
-// 		if (window.pageYOffset >= '200') {
-// 			item.style.cssText = 'color: #6d33ff';
-// 		} else {
-// 			item.style.cssText = 'color: black';
-// 		}
-// 	});
-// });
+window.addEventListener('scroll', () => {
+	if (window.pageYOffset >= '200') {
+		sideLink.forEach(element => {
+			element.classList.remove('sidepanel__link');
+			element.classList.add('link1');
+			element.classList.add('link2');
+			element.classList.add('link3');
+		});
+
+	} else {
+		sideLink.forEach(element => {
+			element.classList.add('sidepanel__link');
+			element.classList.remove('link1');
+			element.classList.remove('link2');
+			element.classList.remove('link3');
+		});
+	}
+});
 
 // изменение цвета боковой полосы при скролле
 window.addEventListener('scroll', () => {
 	if (window.pageYOffset >= '300') {
-		sideDivider.style.cssText = 'background-color: #6d33ff';
+		sideDivider.style.cssText = 'background-color: #6d33ff; transition: .1s all;';
 	} else {
-		sideDivider.style.cssText = 'background-color: black';
+		sideDivider.style.cssText = 'background-color: black; transition: .1s all;';
 	}
 });
 
 // изменение цвета боковой надписи при скролле
 window.addEventListener('scroll', () => {
 	if (window.pageYOffset >= '250') {
-		sideText.style.cssText = 'color: #6d33ff';
+		sideText.style.cssText = 'color: #6d33ff; transition: .1s all';
 	} else {
-		sideText.style.cssText = 'color: black';
+		sideText.style.cssText = 'color: black; transition: .1s all';
 	}
 });
 
