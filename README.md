@@ -1,2 +1,1 @@
-# portfolio-web
-# сайт-портфолио
+# portfolio site
