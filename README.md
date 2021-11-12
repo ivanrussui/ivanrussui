@@ -1,1 +1,1 @@
-# https://ivanrussui.ru/ site-portfolio
+# https://ivanrussui.ru/
