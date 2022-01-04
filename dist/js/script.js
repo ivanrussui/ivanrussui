@@ -18,70 +18,55 @@ const hamburger = document.querySelector('.hamburger'),
 	sideText = document.querySelector('.sidepanel__text > span'),
 	sideLink = document.querySelectorAll('.sidepanel__link');
 
-// console.log(sideLink);
+
+function changeColorSidepanel() {
+	window.addEventListener('scroll', () => {
+		if (window.pageYOffset >= '450') {
+			sideLink.forEach(element => {
+				element.classList.remove('sidepanel__link');
+				element.classList.add('link1');
+				element.classList.add('link2');
+				element.classList.add('link3');
+			});
+	
+		} else {
+			sideLink.forEach(element => {
+				element.classList.add('sidepanel__link');
+				element.classList.remove('link1');
+				element.classList.remove('link2');
+				element.classList.remove('link3');
+			});
+		}
+	});
+	
+	
+	// изменение цвета боковой полосы при скролле
+	window.addEventListener('scroll', () => {
+		if (window.pageYOffset >= '350') {
+			sideDivider.style.cssText = 'background-color: #6d33ff; transition: .1s all;';
+		} else {
+			sideDivider.style.cssText = 'background-color: black; transition: .1s all;';
+		}
+	});
+	
+	// изменение цвета боковой надписи при скролле
+	window.addEventListener('scroll', () => {
+		if (window.pageYOffset >= '250') {
+			sideText.style.cssText = 'color: #6d33ff; transition: .1s all';
+		} else {
+			sideText.style.cssText = 'color: black; transition: .1s all';
+		}
+	});
+}
+
+changeColorSidepanel();
+
+if (window.pageYOffset >= '250') {
+	changeColorSidepanel();
+}
 
 
 
-// получаю координаты страницы
-// console.log(sideText.getBoundingClientRect());
-// получаю координаты скока юзер проскроллил и на основании этой высоты делаю анимацию с событ скролл
-// console.log(document.documentElement.scrollTop);
-
-// counters.forEach((item, i) => {
-// 	lines[i].style.width = item.innerHTML;
-// });
-// 	// 
-
-
-
-// ! изменение цвета боковых ссылок при скролле, все 3 варианта меняют цвет только 1 элементу 
-// window.addEventListener('scroll', () => {
-// 		if (window.pageYOffset >= '200') {
-// 			sideLink.forEach(item => {
-// 				item.style.cssText = 'color: #6d33ff';
-// 			});
-// 		} else {
-// 			sideLink.forEach(item => {
-// 				item.style.cssText = 'color: black';
-// 			});
-// 		}
-// });
-window.addEventListener('scroll', () => {
-	if (window.pageYOffset >= '450') {
-		sideLink.forEach(element => {
-			element.classList.remove('sidepanel__link');
-			element.classList.add('link1');
-			element.classList.add('link2');
-			element.classList.add('link3');
-		});
-
-	} else {
-		sideLink.forEach(element => {
-			element.classList.add('sidepanel__link');
-			element.classList.remove('link1');
-			element.classList.remove('link2');
-			element.classList.remove('link3');
-		});
-	}
-});
-
-// изменение цвета боковой полосы при скролле
-window.addEventListener('scroll', () => {
-	if (window.pageYOffset >= '350') {
-		sideDivider.style.cssText = 'background-color: #6d33ff; transition: .1s all;';
-	} else {
-		sideDivider.style.cssText = 'background-color: black; transition: .1s all;';
-	}
-});
-
-// изменение цвета боковой надписи при скролле
-window.addEventListener('scroll', () => {
-	if (window.pageYOffset >= '250') {
-		sideText.style.cssText = 'color: #6d33ff; transition: .1s all';
-	} else {
-		sideText.style.cssText = 'color: black; transition: .1s all';
-	}
-});
 
 // активирую анимацию boingInUp при скролле 200
 window.addEventListener('scroll', () => {
