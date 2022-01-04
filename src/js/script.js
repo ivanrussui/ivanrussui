@@ -47,7 +47,7 @@ const hamburger = document.querySelector('.hamburger'),
 // 		}
 // });
 window.addEventListener('scroll', () => {
-	if (window.pageYOffset >= '200') {
+	if (window.pageYOffset >= '450') {
 		sideLink.forEach(element => {
 			element.classList.remove('sidepanel__link');
 			element.classList.add('link1');
@@ -67,7 +67,7 @@ window.addEventListener('scroll', () => {
 
 // изменение цвета боковой полосы при скролле
 window.addEventListener('scroll', () => {
-	if (window.pageYOffset >= '300') {
+	if (window.pageYOffset >= '350') {
 		sideDivider.style.cssText = 'background-color: #6d33ff; transition: .1s all;';
 	} else {
 		sideDivider.style.cssText = 'background-color: black; transition: .1s all;';

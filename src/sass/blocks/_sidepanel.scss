@@ -36,21 +36,13 @@
 		}
 	}
 }
-.link1 {
+.link1, .link2, .link3 {
 	svg path {
 		fill: $main-color;
-		transition: .1s all;
+		transition: all .1s;
+	}
+	&:hover svg path {
+		fill: red;
+		transition: all .5s;
 	}
 } 
-.link2 {
-	svg path {
-		fill: $main-color;
-		transition: .1s all;
-	}
-}
-.link3 {
-	svg path {
-		fill: $main-color;
-		transition: .1s all;
-	}
-}
