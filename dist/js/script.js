@@ -183,6 +183,17 @@ for (let i = 0; i < menuLink.length; i++) {
 	});
 }
 
+// ! spinner
+
+const spinner = document.querySelector(".spinner");
+
+window.addEventListener("load", function () {
+	setInterval(() => {
+		spinner.remove();
+	}, 900);
+});
+
+
 // автоматический пересчет процентов
 const counters = document.querySelectorAll('.skills__ratings-counter'),
 	lines = document.querySelectorAll('.skills__ratings-line span');
@@ -193,8 +204,9 @@ counters.forEach((item, i) => {
 
 // });
 
+
 // jQuery плагины
-$(document).ready(function () {
+// $(document).ready(function () {
 	// Validate
 	function validateForms(form) {
 		$(form).validate({
@@ -277,4 +289,7 @@ $(document).ready(function () {
 		});
 		return false;
 	});
-});
+// });
+
+
+
