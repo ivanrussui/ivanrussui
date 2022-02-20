@@ -1,4 +1,4 @@
-// window.addEventListener('DOMContentLoader', () => {
+window.addEventListener('DOMContentLoaded', () => {
 const hamburger = document.querySelector('.hamburger'),
 	menu = document.querySelector('.menu'),
 	closeBtn = document.querySelector('.menu__close'),
@@ -202,11 +202,11 @@ counters.forEach((item, i) => {
 	lines[i].style.width = item.innerHTML;
 });
 
-// });
+});
 
 
 // jQuery плагины
-// $(document).ready(function () {
+$(document).ready(function () {
 	// Validate
 	function validateForms(form) {
 		$(form).validate({
@@ -289,7 +289,7 @@ counters.forEach((item, i) => {
 		});
 		return false;
 	});
-// });
+});
 
 
 
