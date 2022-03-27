@@ -35,9 +35,9 @@
 			fill: $main-color;
 			transition: all 0.5s;
 		}
-		&:nth-child(3) svg {
-			transform: rotate(90deg);
-		}
+		// &:nth-child(3) svg {
+		// 	transform: rotate(90deg);
+		// }
 	}
 	&__form {
 		margin-top: 30px;

@@ -15,9 +15,15 @@
 				transition: all .5s;
 			}
 		}
-		&:nth-child(3) svg {
+		& svg {
 			transform: rotate(-90deg);
 		}
+		// &:nth-child(2) svg {
+		// 	transform: rotate(0deg);
+		// }
+		// &:nth-child(3) svg {
+		// 	transform: rotate(-90deg);
+		// }
 	}
 	&__divider {
 		width: 2px;
