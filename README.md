@@ -1,1 +1,3 @@
-# https://ivanrussui.ru/
+# https://ivanrussui.ru
+# npm i
+# gulp
