@@ -1,17 +1,18 @@
 # See https://help.github.com/ignore-files/ for more about ignoring files.
 
+# IDE
+.idea
+.vscode
+
 # папку css в src удали это для работы так как там Gulp не устанавливается
 /src/css
 
-# заметь в файле инфо, важные замечанию по проекту
+# в файле инфо, важные замечанию по проекту
 info.txt
 
-# phpmailer чтобы с твоими данными почты не уходил на гитхаб
+# phpmailer содержит личные данные почты
 /src/mailer
 /dist/mailer
-
-# текстовый файл в корне проекта
-src_css.txt
 
 # dependencies
 /node_modules
